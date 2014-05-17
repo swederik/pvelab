@@ -1,0 +1,222 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Point Selection</TITLE>
+<META NAME="description" CONTENT="Point Selection">
+<META NAME="keywords" CONTENT="ips">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="ips.css">
+
+<LINK REL="next" HREF="node5.html">
+<LINK REL="previous" HREF="node3.html">
+<LINK REL="up" HREF="node1.html">
+<LINK REL="next" HREF="node5.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html113"
+  HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html111"
+  HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html105"
+  HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html114"
+  HREF="node5.html">Parameter Estimation</A>
+<B> Up:</B> <A NAME="tex2html112"
+  HREF="node1.html">IPS - Interactive Point</A>
+<B> Previous:</B> <A NAME="tex2html106"
+  HREF="node3.html">Coarse Prealignment</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H4><A NAME="SECTION00001030000000000000">
+Point Selection</A>
+</H4>
+Since the images have now been roughly aligned, it is time to select a
+number of landmark points in both images. To add a point set, we
+must click the 'Add Point' button of the IPS main
+  window. This modifies the appearance of the
+point list window:
+
+<DIV ALIGN="CENTER"><A NAME="ips_point_one.ps"></A><A NAME="89"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure:</STRONG>
+One point set entered</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<A NAME="tex2html17"
+  HREF=""><IMG
+ WIDTH="250" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img10.png"
+ ALT="\includegraphics[width=0.45\textwidth]{images/ips_point_one.ps}"></A>
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+Entering data into the program now happens by interaction with the two
+3-pane windows. Adjustment of e.g. a point set in the standard image
+can happen in several ways:
+
+<UL>
+<LI>By clicking on either of the three panes.
+</LI>
+<LI>By adjusting the sliders of the window.
+</LI>
+<LI>By entering numbers into the x,y and z boxes  of the window.
+</LI>
+</UL>
+The effect of clicking on a pane depends on the <I>zoom state</I> of
+the 3-pane window. The zoom state is toggled on/off by pressing the
+keyboard <TT>ctrl</TT> key, when the window has focus. The state is
+indicated by the background color of the window (Figure <A HREF="node4.html#ips_slice3_zoom">6</A>).
+
+<DIV ALIGN="CENTER"><A NAME="ips_slice3_std.ps"></A><A NAME="ips_slice3_zoom"></A><A NAME="106"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 6:</STRONG>
+3-pane standard image window, zoom off (left) and zoom on (right).</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<A NAME="tex2html19"
+  HREF="<A NAME="tex2html20"
+  HREF=">">"</A><IMG
+ WIDTH="250" HEIGHT="211" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="\includegraphics[width=0.45\textwidth]{images/ips_slice3_std.ps}"></A><IMG
+ WIDTH="250" HEIGHT="211" ALIGN="BOTTOM" BORDER="0"
+ SRC="img11.png"
+ ALT="\includegraphics[width=0.45\textwidth]{images/ips_slice3_zoomstate.ps}">
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+When the window is not in zoom mode, clicking the panes will adjust
+the white crosshair and the two other panes, i.e. clicking the axial
+pane will modify the x,y values of the crossing planes, and readjust
+the coronal and sagital views. When the window is in zoom state, a
+zoomed version of the clicked pane will appear on screen (Figure <A HREF="node4.html#ips_slice3_zoomed.ps">0.1</A>).
+
+<DIV ALIGN="CENTER"><A NAME="ips_slice3_zoomed.ps"></A><A NAME="114"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure:</STRONG>
+3-pane standard image window - zoomed view</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<A NAME="tex2html22"
+  HREF=""><IMG
+ WIDTH="250" HEIGHT="202" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="\includegraphics[width=0.45\textwidth]{images/ips_slice3_zoomed.ps}"></A>
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+The currently selected coordinates are indcated by the dashed, white
+crosshair, and the modified coordinate set by the green dot. A
+landmark, e.g. the central point of the left eye, can now be
+selected by 
+
+<UL>
+<LI>Clicking the zoomed window using the mouse.
+</LI>
+<LI>Pressing the keyboard arrow keys, translation stepsize
+    selectable by the + and - keys.
+</LI>
+</UL>
+The standard Matlab zoom function can be utilised to zoom further when
+selecting a new landmark point. When coordinates of a landmark point
+are updated, the currently selected pointset on the
+point list interface
+is updated (Figure <A HREF="node4.html#ips_point_value.ps">0.1</A>). By pressing the 'undo'
+buttons, point changes made in error can be un-done.w
+
+<DIV ALIGN="CENTER"><A NAME="ips_point_value.ps"></A><A NAME="126"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure:</STRONG>
+One point set entered</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<A NAME="tex2html24"
+  HREF=""><IMG
+ WIDTH="250" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img13.png"
+ ALT="\includegraphics[width=0.45\textwidth]{images/ips_point_value.ps}"></A>
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+By entering text into the description field of the
+<A NAME="tex2html28"
+  HREF="images/ips_point_value.png">point list interface</A>,
+the landmark can be given an anatomical label. The entire process of
+point selection should now be repeated for a suitable number of
+landmark points. The litterature<A NAME="tex2html25"
+
+HREF="footnode.html#foot132"><SUP>1</SUP></A> indicates that this number should be at least 6 point
+sets and preferably 12 pointsets. <B>Note:</B> If the reslice 3-pane window
+has undergone the Coarse Prealignment procedure, the numbers indicated
+on the point list interface will differ from those shown on the 3-pane
+window.
+
+<DIV ALIGN="CENTER"><A NAME="ips_point_many.ps"></A><A NAME="137"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure:</STRONG>
+Several point sets entered</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<A NAME="tex2html27"
+  HREF=""><IMG
+ WIDTH="250" HEIGHT="46" ALIGN="BOTTOM" BORDER="0"
+ SRC="img14.png"
+ ALT="\includegraphics[width=0.45\textwidth]{images/ips_point_many.ps}"></A>
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html113"
+  HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html111"
+  HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html105"
+  HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html114"
+  HREF="node5.html">Parameter Estimation</A>
+<B> Up:</B> <A NAME="tex2html112"
+  HREF="node1.html">IPS - Interactive Point</A>
+<B> Previous:</B> <A NAME="tex2html106"
+  HREF="node3.html">Coarse Prealignment</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Claus Svarer
+2004-07-23
+</ADDRESS>
+</BODY>
+</HTML>

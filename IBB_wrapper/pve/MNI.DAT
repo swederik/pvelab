@@ -1,0 +1,23 @@
+Report ROI coding #, ROI Name and color in exaddecimal, separated by a <Tab> hereinafter, with no space at the end
+81	R_Hippocampus		008000
+60	L_Hippocampus		008000
+61	AnteriorCingulate	000080
+62	PosteriorCingulate	000080
+62	Precuneus		000080
+51	Occipital		ff0000
+63	DeepGM			00ffff
+52	L_Frontal		00ff00
+53	L_Temporal		000080
+54	L_Parietal		ff00ff
+72	R_Frontal		008000
+73	R_Temporal		0000ff
+74	R_Parietal		800080
+59	L_BRODMANN9		800000
+59	L_BRODMANN10		800000
+59	L_BRODMANN45		800000
+59	L_BRODMANN46		800000
+79	R_BRODMANN9		ff0000
+79	R_BRODMANN10		ff0000
+79	R_BRODMANN45		ff0000
+79	R_BRODMANN46		ff0000
+99	Cerebellum		008080

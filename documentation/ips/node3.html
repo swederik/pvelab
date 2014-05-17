@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Coarse Prealignment</TITLE>
+<META NAME="description" CONTENT="Coarse Prealignment">
+<META NAME="keywords" CONTENT="ips">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="ips.css">
+
+<LINK REL="next" HREF="node4.html">
+<LINK REL="previous" HREF="node2.html">
+<LINK REL="up" HREF="node1.html">
+<LINK REL="next" HREF="node4.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html103"
+  HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html101"
+  HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html95"
+  HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html104"
+  HREF="node4.html">Point Selection</A>
+<B> Up:</B> <A NAME="tex2html102"
+  HREF="node1.html">IPS - Interactive Point</A>
+<B> Previous:</B> <A NAME="tex2html96"
+  HREF="node2.html">Startup</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H4><A NAME="SECTION00001020000000000000">
+Coarse Prealignment</A>
+</H4>
+It is easily seen in Figure <A HREF="node3.html#ips_slice3_eye.ps">3</A> that the two images
+are not very well aligned, especially a certain amount of rotation in the
+sagital and axial views make the two images differ. Since selection of
+the same landmarks would likely be easier if the images were roughly
+aligned, a method for coarse prealigment is available. <B>Note:</B> In
+principle, both images can be prealigned, however memory usage and
+calculation time is less if only the low resolution image is
+prealigned. The low resolution is typically entered into the program
+as the <I>reslice</I> image.
+
+<DIV ALIGN="CENTER"><A NAME="ips_slice3_eye.ps"></A><A NAME="54"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3:</STRONG>
+Initial orientation of the standard and reslice datasets.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<A NAME="tex2html8"
+  HREF="<A NAME="tex2html9"
+  HREF=">">"</A><IMG
+ WIDTH="250" HEIGHT="211" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.png"
+ ALT="\includegraphics[width=0.45\textwidth]{images/ips_slice3_std_eye.ps}"></A><IMG
+ WIDTH="250" HEIGHT="211" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="\includegraphics[width=0.45\textwidth]{images/ips_slice3_res_eye.ps}"> 
+
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+To adjust the orientation of the reslice dataset, the red 'Alignment'
+button should be pressed, and one of the three image panes, e.g. the
+sagital pane clicked. A zoomed version of the image then appears (left
+in Figure <A HREF="node3.html#ips_slice3_res_zoom">4</A>). Using the keyboard and mouse
+
+<UL>
+<LI>The pointer keys adjusts the image orientation by translation.
+</LI>
+<LI>Translation stepsize is adjustable through + and - keys.
+</LI>
+<LI>The , and . keys adjusts the image orientation by rotation,
+    in positive/negative direction.
+</LI>
+<LI>Rotation stepsize is adjustable through * and / keys.
+</LI>
+<LI>The centre of rotation is selectable using mouse clicking.
+</LI>
+</UL>
+Once the image orientation is satisfactory (right
+in Figure <A HREF="node3.html#ips_slice3_res_zoom">4</A>), the window should be
+closed using either the keyboard <TT>x</TT> key or the close button of
+the window.
+
+<DIV ALIGN="CENTER"><A NAME="ips_slice3_res_zoom"></A><A NAME="72"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 4:</STRONG>
+Orientation of the reslice dataset, before (left) and after
+  (right) prealignment.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<A NAME="tex2html11"
+  HREF="<A NAME="tex2html12"
+  HREF=">">"</A><IMG
+ WIDTH="250" HEIGHT="199" ALIGN="BOTTOM" BORDER="0"
+ SRC="img7.png"
+ ALT="\includegraphics[width=0.45\textwidth]{images/ips_slice3_res_zoom_1.ps}"></A><IMG
+ WIDTH="250" HEIGHT="199" ALIGN="BOTTOM" BORDER="0"
+ SRC="img8.png"
+ ALT="\includegraphics[width=0.45\textwidth]{images/ips_slice3_res_zoom_2.ps}"> 
+
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+When prealignment has been applied in all panes, the images should be
+roughly aligned (Figure <A HREF="node3.html#ips_slice3_res_aligned.ps">5</A>).
+
+<DIV ALIGN="CENTER"><A NAME="ips_slice3_res_aligned.ps"></A><A NAME="81"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 5:</STRONG>
+Orientation of the standard  and reslice datasets after
+  prealignment.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<A NAME="tex2html14"
+  HREF="<A NAME="tex2html15"
+  HREF=">">"</A><IMG
+ WIDTH="250" HEIGHT="211" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.png"
+ ALT="\includegraphics[width=0.45\textwidth]{images/ips_slice3_std_eye.ps}"></A><IMG
+ WIDTH="250" HEIGHT="211" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="\includegraphics[width=0.45\textwidth]{images/ips_slice3_res_aligned.ps}"> 
+
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html103"
+  HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html101"
+  HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html95"
+  HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html104"
+  HREF="node4.html">Point Selection</A>
+<B> Up:</B> <A NAME="tex2html102"
+  HREF="node1.html">IPS - Interactive Point</A>
+<B> Previous:</B> <A NAME="tex2html96"
+  HREF="node2.html">Startup</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Claus Svarer
+2004-07-23
+</ADDRESS>
+</BODY>
+</HTML>

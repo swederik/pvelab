@@ -1,0 +1,119 @@
+;This is a comment: it is ignored and can be put wherever you want
+;
+;Values between {} are the defalt values and the specification can be omitted
+;
+;If you specify more times a value, the last specification is used
+;
+;For values of type Yes/No you can specify 1,y,Y,s,S,Yes etc, for yes, 0,n,N,No etc, for No.
+;
+;
+;Top to bottom flag: if it is active, the image is flipped on y and z coordinates
+;Applicable values: {Yes}, No
+ttb=Y
+;
+;Correction around y. Flag: if it is active, the image is rotated around y axis
+;Applicable values: Yes, {No}
+CorrectY=Y
+;
+;Output format of Mueller Gartner, modified Mueller Gartner and Meltzer output images
+;Applicable values: {Analize}, Dicom, Prompt
+OutputFormat=A
+;
+;CSF flag: activate this flag if CSF has significant activity
+;Applicable values: Yes, {No}
+;Automatically modified by PVELab wrapper according to pipeline settings.
+CSFAnalisys=Y
+;
+;Absolute or relative path to ROI file, that contains ROI names and codes
+;Default value: LOBES_ROI.dat
+;Automatically modified by PVELab wrapper according to pipeline settings.
+ROIFile=MNI.dat
+;
+;Absolute or relative path to Classify file, that contains Talairach atlas codes
+;Default value: ClassifyTalair.Mat
+;Automatically modified by PVELab wrapper according to pipeline settings.
+ClassifyFile=ClassifyTalair.Mat
+;
+;Thumbnail size: size, in pixel, of thumbnail of slices displayed by the program
+;The maximum value is MAX_SIZE, defined in "parametri.h"
+;If it exceeds the maximum or is less than 16, it is set to the default value
+;Default value: 128
+;This is related to old, Linux and X-Window only, implementation.
+TSize=128
+;
+;Window x size: width, in pixel, of the window used for displaying thumbnails
+;Default value: 1600
+;This is related to old, Linux and X-Window only, implementation.
+XSize=1280
+;
+;Window y size: height, in pixel, of the window used for displaying thumbnails
+;Default value: 1200
+;This is related to old, Linux and X-Window only, implementation.
+YSize=1024
+;
+;Threshold of the sum of probabilities for discarding a voxel in an ANALIZE segmented image
+;Default value: 128
+Cutoff=128
+;
+;Minimum number of active voxel to consider brain
+;Default value: 10
+MinVox=10
+;
+;FWHM along XY plane (in mm, as measured on the scanner)
+;Applicable values: maximum 20. If the value is negative, the parameter is prompted to the user
+;Default value: 8
+;Automatically modified by PVELab wrapper according to pipeline settings.
+FWHMXY=8
+;
+;FWHM along Z axis (in mm, as measured on the scanner)
+;Applicable values: maximum 20. If the value is negative, the parameter is prompted to the user
+;Default value: 8
+;Automatically modified by PVELab wrapper according to pipeline settings.
+FWHMZ=8
+;
+;Percentage of voxels to be considered overcorrected in Mueller-Gartner and Meltzer
+;modules (set to 0 if you do not want to apply any restriction to correction).
+;Default value: 0.0
+;Automatically modified by PVELab wrapper according to pipeline settings.
+OverCorrect=0.00
+;
+;Minimum value of a transfer coefficient to be used in matrix inversion (lower values are zeroed)
+;Useful to catch round-off errors or to ignore negligible interactions.
+;Default value: 0.0
+TMCorrect=0.0
+;
+;Minimum value of all PET recovered activity.
+;If any of the recovered pet values is below this threshold (both regional and voxelwise)
+;the recovered value is forced to this value and for the Rousset method the calculus
+;is repeated with this constraint.
+;Set to a low value (e.g. -1e38) to disable this behaviour.
+;Default value: 0.0
+MinPVECValue=-1e38
+;
+;Offset in mm along z axis to add to Z of AC and to subtract to Z of PC
+;Default value: 0.0
+ZOffset=-1
+;
+;WaitGMROIEdit flag: if is active, the program waits that you edit GMROI file.
+;Applicable values: Yes, {No}
+WaitGMROIEdit=N
+;
+;
+;
+;
+;
+;MethodsMask flags: binary mask to activate the various methods of PVEC and WM activity estimation
+;Sum the values corresponding to each value of the method you want to activate
+;If you do not activate at least one PVEC Method and at least one WM activity estimation method, the default value will be used
+; 1 PVEC Rousset
+; 2 PVEC Meltzer
+; 4 PVEC Mueller - Gartner
+; 8 PVEC Alfano
+; 32 WMAE CS slices
+; 64 WMAE Rousset (force the calculus of Rousset)
+; 128 WMAE Alfano
+;Default value: all PVEC and WMAE methods activated
+;For each WMA estimation is used each PVEC method activated and the results are calculated
+;Currently up to 8 combination are possible (2 PVEC * 3 WMAE + Rousset + Meltzer)
+;Automatically modified by PVELab wrapper according to pipeline settings.
+MethodsMask=142

@@ -1,0 +1,66 @@
+;-----------------------------------------------------------------
+;               Configuration file: config
+;
+;This is a comment: it can be put everywhere and it is ignored
+;Values between {curly braces} are the default and you can omit them
+;If you specify more times a value, the last definition is used
+;-----------------------------------------------------------------
+;
+
+;> Input files. DO NOT MODIFY! <
+
+SymbolFile=simboli.asc
+TissueData=box.dat
+TagList=tag.dat
+
+;> Algorithm options <
+
+QMCISkip=N		;Skip the QMCI step and use QMCI images as base. Applicable values: Yes, {No}
+Segmentation=Y		;Write the segmented files? {Yes}, No, Prompt
+VolDistr=Y		;Calculate the voxel distribution and volume measure. {Yes}
+QmciFlag=Q		;{Q} = QMCI, M = MCI
+Taglio=T		;{T} = Transversal, S = Sagittal, C = Coronal. Slices with different cut will be discarded
+ParseSubDir=N		;Discend in subdir. Useful to read new directory format from rcv. Applicable values: Yes, {No}
+
+;> R1, R2, PD - Maps calculation <
+
+MinR1=1			;Minimum value of R1. {1}
+MaxR1=255		;Maximum value of R1. {255}
+R1ScaleFact=100.0	;R1 scale factor. {100.0}
+R2CorrFact=210.0	;R2 correction factor. {210.0}
+PDNoise=-12.0		;Background noise for PDw signal. {320.0}
+PDNormFact=84.0		;Normalization factor of parenchyma's PD. {84.0}
+
+;> Voxel Distribution <
+
+DrawBox=N		;Draw boxes on the voxel distribution. {Yes}, No
+BoxLimit=Y		;To limit the voxel distribution display to GM, WM, AWM. {Yes}, No
+NTRNTE=-1,-1,-1,-1,-1,-1;True values of TR1,TR2,TR3,TE1,TE2,TE3. {-1}, -2 the values that must be requested from the keyboard
+FilterTh=0.15		;9 points filter threshold. {0.15}
+FilteringVD=Y		;Calulate the voxel distribution with filtered images or not?. {Yes}, No
+R1Align=N		;Align the R1 istogram ? {Yes}, No
+GBTh=Y			;Calculate the Gray matter - White matter R1 threshold ? {Yes}, No
+GBThP=0.44		;Fraction of the interval in which set the Gray matter - White matter R1 threshold. {0.45}
+GaussFit=Y		;Calculate the Gray matter - White matter R1 threshold with the simulated Gaussian ? Yes, {No}
+NewGMPeak=Y		;Use new start point for GM peak searching ? Yes, {No}
+NewR2=Y			;Use new R2 calculation method ? Yes, {No}
+NewPos=N		;Use slice position instead of slice thickness for volume measures ? Yes, {No}
+NewR2Box=N		;Use new R2 box align method ? Yes, {No}
+NewErode=Y		;Use new mucosa erode method ? Yes, {No}
+GRecl=Y			;Use gerarchical reclassify method ? Yes, {No}
+NewFlipAngle=90.0	;Flip Angle to use (PDW/T2W). {90.0}
+NewFlipAngleT1=90.0	;Flip Angle to use (T1W). {90.0}
+R12Corr=Y		;Signal correction for R1 and R2. {Yes}, No
+PDBug=Y			;Reproduce PD calculation Bug. {Yes}, No
+PDSat=255.0		;PD Saturation. Value over 255 does not affect calculation. {255.0}
+Piedistallo=.1		;Fraction of peak value to which set the interval. {0.1 (10%)}
+IstogramSmoothing=Y	;Smooth the R1 istogram ? {Yes}, No
+
+;> Output image format and display <
+
+SwapLR=N;		;Swap left and right in DICOM image reading. Applicable values: Yes, {No}
+CoordOffset=300		;Offset added to the slice coordinate in the output file names. {0}
+QmciOut=B		;QMCI output flag: {Q} = QMCI images only, S = signal images only, B,E = both
+FourthChannel=N 	;Produce the AWM ROI in the fourth channel of QMCI images?. {Yes}, No
+OutputFormat=A		;output format - I = raw Interlaeaved, N = raw Non interleaved, {T} = TIFF, A = ANALYZE, D = DICOM, P = Prompt
+ImageFilter=Y		;Filter the image to eliminate partial volume effect ? {Yes}, No

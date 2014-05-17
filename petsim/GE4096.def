@@ -1,0 +1,54 @@
+field of view:
+FOV=550
+
+number of projection in the x direction
+members=96
+
+the projection angles
+theta=[270:-180/511:90]
+
+offset of the projections
+projectionOffset=0
+
+the camera acquisitoion efficiency with GE68 line source
+calibrationFactor=2.8e5
+
+The volume of one voxel
+voxelSize=0.0480
+
+the pixel size on the axial slice
+pixelSize=2
+
+radialResolutionValues=6 6.5 7
+
+radialResolutionRadius=0 100 200
+
+the slice width
+axialPixelSize=6.5
+
+axialResolutionValues=6 6.5 7
+axialResolutionRadius=0 100 200
+
+randomEffectConstant=1.0014
+
+randomCorrectionConstants=0.0375 0.161
+
+Scatter parameters
+scale=2.5517
+A1=1.6702e-3
+A2=1.464
+A3=2.145e-3
+A4=1.352
+A5=5.664e-2
+A6=1.584e-2
+A7=1.203
+A8=0.2037
+A10=1.195
+A11=0.279
+A12=0
+A13=1.0907e-2
+A14=0.6526e-2
+A15=1.104
+A16=9.334e-2
+A18=1.77e-2
+A21=0.118e-2

@@ -1,0 +1,2 @@
+/pc_disk1/users/csvarer/subj1_BP.img;/pc_disk1/users/csvarer/subj1_mr.img
+/pc_disk1/users/csvarer/subj1_BP.img;/pc_disk1/users/csvarer/subj2_mr.img

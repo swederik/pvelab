@@ -1,0 +1,1652 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:p="urn:schemas-microsoft-com:office:powerpoint"
+xmlns:oa="urn:schemas-microsoft-com:office:activation"
+xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 10">
+<meta name=Originator content="Microsoft Word 10">
+<link rel=File-List href="petsim_manual_elemei/filelist.xml">
+<link rel=Edit-Time-Data href="petsim_manual_elemei/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Analytical PET Simulator</title>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="place"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="City"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="address"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="Street"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="PlaceName"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="PlaceType"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="country-region"/>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>vivan</o:Author>
+  <o:LastAuthor>vivan</o:LastAuthor>
+  <o:Revision>5</o:Revision>
+  <o:TotalTime>16</o:TotalTime>
+  <o:Created>2004-09-06T09:33:00Z</o:Created>
+  <o:LastSaved>2004-09-06T09:43:00Z</o:LastSaved>
+  <o:Pages>1</o:Pages>
+  <o:Words>2056</o:Words>
+  <o:Characters>11720</o:Characters>
+  <o:Company>DE OEC</o:Company>
+  <o:Lines>97</o:Lines>
+  <o:Paragraphs>27</o:Paragraphs>
+  <o:CharactersWithSpaces>13749</o:CharactersWithSpaces>
+  <o:Version>10.3501</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>90</w:Zoom>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:HyphenationZone>21</w:HyphenationZone>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if !mso]><object
+ classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]-->
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:HU;
+	mso-fareast-language:HU;}
+h1
+	{mso-style-next:Normál;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:Arial;
+	mso-font-kerning:16.0pt;
+	mso-ansi-language:HU;
+	mso-fareast-language:HU;}
+h2
+	{mso-style-next:Normál;
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:14.0pt;
+	font-family:Arial;
+	mso-ansi-language:HU;
+	mso-fareast-language:HU;
+	font-weight:normal;
+	mso-bidi-font-weight:bold;
+	mso-bidi-font-style:italic;}
+h3
+	{mso-style-next:Normál;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:10.0pt;
+	mso-bidi-font-size:13.0pt;
+	font-family:"Times New Roman";
+	mso-bidi-font-family:Arial;
+	mso-ansi-language:HU;
+	mso-fareast-language:HU;
+	font-weight:normal;
+	mso-bidi-font-weight:bold;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normál;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:HU;
+	mso-fareast-language:HU;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normál;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:12.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:HU;
+	mso-fareast-language:HU;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{mso-style-update:auto;
+	mso-style-noshow:yes;
+	mso-style-next:Normál;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:24.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:HU;
+	mso-fareast-language:HU;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 216.0pt right 432.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:HU;
+	mso-fareast-language:HU;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 216.0pt right 432.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:HU;
+	mso-fareast-language:HU;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:HU;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:HU;
+	mso-fareast-language:HU;}
+span.Cmsor2Char
+	{mso-style-name:"Címsor 2 Char";
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	mso-ansi-language:HU;
+	mso-fareast-language:HU;
+	mso-bidi-language:AR-SA;
+	mso-bidi-font-weight:bold;
+	mso-bidi-font-style:italic;}
+span.Cmsor3Char
+	{mso-style-name:"Címsor 3 Char";
+	mso-bidi-font-size:13.0pt;
+	font-family:Arial;
+	mso-ascii-font-family:Arial;
+	mso-hansi-font-family:Arial;
+	mso-bidi-font-family:Arial;
+	mso-ansi-language:HU;
+	mso-fareast-language:HU;
+	mso-bidi-language:AR-SA;
+	mso-bidi-font-weight:bold;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 89.85pt 72.0pt 89.85pt;
+	mso-header-margin:35.45pt;
+	mso-footer-margin:35.45pt;
+	mso-title-page:yes;
+	mso-footer:url("petsim_manual_elemei/header.html") f1;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:69233110;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1328198 68026391 68026393 68026395 68026383 68026393 68026395 68026383 68026393 68026395;}
+@list l0:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l0:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1
+	{mso-list-id:161316328;
+	mso-list-type:hybrid;
+	mso-list-template-ids:219044028 68026391 68026393 68026395 68026383 68026393 68026395 68026383 68026393 68026395;}
+@list l1:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2
+	{mso-list-id:234709598;
+	mso-list-type:hybrid;
+	mso-list-template-ids:330737582 68026369 68026371 68026373 68026369 68026371 68026373 68026369 68026371 68026373;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:53.4pt;
+	mso-level-number-position:left;
+	margin-left:53.4pt;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l2:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l2:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3
+	{mso-list-id:810489473;
+	mso-list-type:hybrid;
+	mso-list-template-ids:63318708 68026391 68026393 68026395 68026383 68026393 68026395 68026383 68026393 68026395;}
+@list l3:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"%1\)";
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l3:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4
+	{mso-list-id:1862160260;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1246690010 511974874 68026393 68026395 68026383 68026393 68026395 68026383 68026393 68026395;}
+@list l4:level1
+	{mso-level-tab-stop:53.4pt;
+	mso-level-number-position:left;
+	margin-left:53.4pt;
+	text-indent:-18.0pt;
+	color:blue;}
+@list l4:level2
+	{mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level3
+	{mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level4
+	{mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level5
+	{mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level6
+	{mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level7
+	{mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level8
+	{mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l4:level9
+	{mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Normál táblázat";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="3074"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:35.4pt'>
+
+<div class=Section1>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><i style='mso-bidi-font-style:
+normal'><span style='font-size:24.0pt;mso-ansi-language:EN-US'>Analytical PET
+Simulator<o:p></o:p></span></i></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span class=GramE><span
+style='mso-ansi-language:EN-US'>v-1.1</span></span><span style='mso-ansi-language:
+EN-US'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><i style='mso-bidi-font-style:
+normal'><span style='font-size:18.0pt;mso-ansi-language:EN-US'>Users’ guide<o:p></o:p></span></i></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><st1:place><st1:PlaceName><b
+  style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><span
+  style='font-size:16.0pt;mso-ansi-language:EN-US'>DEOEC</span></i></b></st1:PlaceName><b
+ style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><span
+ style='font-size:16.0pt;mso-ansi-language:EN-US'> </span></i></b><st1:PlaceName><b
+  style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><span
+  style='font-size:16.0pt;mso-ansi-language:EN-US'>PET</span></i></b></st1:PlaceName><b
+ style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><span
+ style='font-size:16.0pt;mso-ansi-language:EN-US'> </span></i></b><st1:PlaceType><b
+  style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><span
+  style='font-size:16.0pt;mso-ansi-language:EN-US'>Center</span></i></b></st1:PlaceType></st1:place><b
+style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><span
+style='font-size:16.0pt;mso-ansi-language:EN-US'><o:p></o:p></span></i></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><i style='mso-bidi-font-style:
+normal'><span style='font-size:14.0pt;mso-ansi-language:EN-US'>2004<o:p></o:p></span></i></p>
+
+<p class=MsoNormal align=center style='text-align:center'><st1:country-region><st1:place><i
+  style='mso-bidi-font-style:normal'><span style='font-size:14.0pt;mso-ansi-language:
+  EN-US'>Hungary</span></i></st1:place></st1:country-region><i
+style='mso-bidi-font-style:normal'><span style='font-size:14.0pt;mso-ansi-language:
+EN-US'><o:p></o:p></span></i></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-ansi-language:EN-US'>Supported by PVEOUT EU5-QLG3&#8209;CT2000&#8209;00594
+project<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<span style='font-size:16.0pt;font-family:Arial;mso-fareast-font-family:"Times New Roman";
+mso-font-kerning:16.0pt;mso-ansi-language:EN-US;mso-fareast-language:HU;
+mso-bidi-language:AR-SA'><br clear=all style='page-break-before:always'>
+</span>
+
+<h1><a name="_Toc80498038"><span style='mso-ansi-language:EN-US'>Simulation
+concepts</span></a><span style='mso-ansi-language:EN-US'><o:p></o:p></span></h1>
+
+<p class=MsoNormal><span style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoBodyText style='text-indent:36.0pt;line-height:150%'><span
+lang=EN-GB style='mso-ansi-language:EN-GB'>A realistic simulation tool can remarkably
+contribute to modelling or tracking the data acquisition process of a PET
+system. <span class=GramE>The less versatile but much faster AS method is
+especially instrumental in repeated simulations.</span> A simulator of this
+kind may provide highly reliable data for the PET images of the brain due to
+the nearly homogeneous tissue structure of this organ, as far as analytically
+describable processes are concerned (e.g.</span><span style='mso-ansi-language:
+EN-US'>&nbsp;attenuation, </span><st1:City><st1:place><span lang=EN-GB
+  style='mso-ansi-language:EN-GB'>Compton</span></st1:place></st1:City><span
+lang=EN-GB style='mso-ansi-language:EN-GB'> scatter, <span class=GramE>random</span>
+coincidences).<span style='mso-spacerun:yes'>   </span><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-indent:36.0pt;line-height:150%'><span
+style='mso-ansi-language:EN-US'>We have chosen the analytical simulator to
+allow for the analytical calculation of distortions of primary (theoretical)
+activity distribution data caused by the physical characteristics of the
+scanner and the special features of image processing. The developed simulator
+generates the true count distributions along the brain slices as input data for
+the reconstruction using the tracer kinetic model of the applied
+radiopharmaceutical to any given brain region to be simulated. A presumed blood
+curve for the tracer can be selected as additional input information from a
+collection of 10 different types of curves. <o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-indent:36.0pt;line-height:150%'><span
+style='mso-ansi-language:EN-US'>Most of the generated physical effects are
+simulated as a Poisson process. Each effect, such as spatial blurring</span> <span
+style='mso-ansi-language:EN-US'>(using the Point Spread Function of the
+camera), attenuation, </span><st1:City><st1:place><span class=GramE><span
+  style='mso-ansi-language:EN-US'>Compton</span></span></st1:place></st1:City><span
+style='mso-ansi-language:EN-US'> scattering and random coincidences can be
+switched off/on, to analyze its contribution to the result of the simulation
+process (e.g. Partial Volume Effect).</span></p>
+
+<p class=MsoBodyText style='text-indent:36.0pt;line-height:150%'><span
+style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoBodyText style='text-indent:36.0pt;line-height:150%'><span
+style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<h1><a name="_Toc80498039"><span style='mso-ansi-language:EN-US'>Installation</span></a><span
+style='mso-ansi-language:EN-US'><o:p></o:p></span></h1>
+
+<p class=MsoBodyText style='line-height:150%'><span style='mso-ansi-language:
+EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText style='text-align:justify;text-indent:35.4pt'><span
+style='font-size:12.0pt;font-family:"Times New Roman";mso-ansi-language:EN-US'>Extract
+the zip file, (e.g. to folder c:\petsim) and add the <span class=SpellE>petsim</span>
+folder and all subfolders into the Matlab path.<o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-indent:35.4pt;line-height:150%'><span
+style='mso-ansi-language:EN-US'>Please read the <span class=SpellE><i
+style='mso-bidi-font-style:normal'>readme</i></span> files in the <span
+class=SpellE><i style='mso-bidi-font-style:normal'>readme_doc</i></span>
+folder. <o:p></o:p></span></p>
+
+<p class=MsoPlainText style='text-align:justify;text-indent:35.4pt'><span
+style='font-size:12.0pt;font-family:"Times New Roman";mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoBodyText style='text-indent:36.0pt;line-height:150%'><span
+style='mso-bidi-font-size:12.0pt;line-height:150%;mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoBodyText style='text-indent:36.0pt;line-height:150%'><span
+style='mso-bidi-font-size:12.0pt;line-height:150%;mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<h1><a name="_Toc80498040"><span style='mso-ansi-language:EN-US'>Start the
+Simulator</span></a><span style='mso-ansi-language:EN-US'><o:p></o:p></span></h1>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:35.4pt;
+line-height:150%'><span class=GramE><span style='mso-ansi-language:EN-US'>Type <span
+class=SpellE><i style='mso-bidi-font-style:normal'>PetAnalSimulator</i></span>
+or <span class=SpellE><i style='mso-bidi-font-style:normal'>petsim_Wrapper</i></span>
+command in the <b style='mso-bidi-font-weight:normal'>Matlab</b> prompt.</span></span><span
+style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p class=MsoBodyText style='text-indent:35.4pt;line-height:150%'><span
+style='mso-ansi-language:EN-US'>The main window is displayed in Figure 1.<o:p></o:p></span></p>
+
+<p class=MsoBodyText style='line-height:150%'><span style='mso-ansi-language:
+EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-ansi-language:EN-US'><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1029" type="#_x0000_t75" style='width:540.75pt;
+ height:454.5pt'>
+ <v:imagedata src="petsim_manual_elemei/image010.jpg" o:title="petsim_main_with_flags"/>
+</v:shape><![endif]--><![if !vml]><img width=721 height=606
+src="petsim_manual_elemei/image011.jpg" v:shapes="_x0000_i1029"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:10.0pt;mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:10.0pt;mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:10.0pt;mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><a name="_Toc80498041"></a><a
+name=fig1><span style='mso-bookmark:_Toc80498041'><span style='font-size:10.0pt;
+mso-ansi-language:EN-US'>Figure</span></span></a><span style='mso-bookmark:
+fig1'><span style='mso-bookmark:_Toc80498041'><span lang=HU style='font-size:
+10.0pt'> <span class=GramE>1</span></span></span></span><span class=GramE><span
+style='font-size:10.0pt;mso-ansi-language:EN-US'>.:</span></span><span
+style='font-size:10.0pt;mso-ansi-language:EN-US'> The main window of the
+simulator<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><span style='mso-ansi-language:
+EN-US'>Parts of the main window:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:53.4pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l4 level1 lfo2;tab-stops:list 53.4pt'><![if !supportLists]><span
+style='color:blue;mso-ansi-language:EN-US'><span style='mso-list:Ignore'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='mso-ansi-language:EN-US'>(pushbutton) Shows the file load dialog, loads
+the input segmented MR file and shows the axial, coronal and <span
+class=SpellE>sagittal</span> slices.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:53.4pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l4 level1 lfo2;tab-stops:list 53.4pt'><![if !supportLists]><span
+style='color:blue;mso-ansi-language:EN-US'><span style='mso-list:Ignore'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='mso-ansi-language:EN-US'>(text field) Displays the name of the loaded MR
+file.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:53.4pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l4 level1 lfo2;tab-stops:list 53.4pt'><![if !supportLists]><span
+style='color:blue;mso-ansi-language:EN-US'><span style='mso-list:Ignore'>3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='mso-ansi-language:EN-US'>(pushbutton) Shows the tracer model setup
+dialog box.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:53.4pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l4 level1 lfo2;tab-stops:list 53.4pt'><![if !supportLists]><span
+style='color:blue;mso-ansi-language:EN-US'><span style='mso-list:Ignore'>4.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='mso-ansi-language:EN-US'>(pushbutton) Loads own PET camera definition
+file.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:53.4pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l4 level1 lfo2;tab-stops:list 53.4pt'><![if !supportLists]><span
+style='color:blue;mso-ansi-language:EN-US'><span style='mso-list:Ignore'>5.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='mso-ansi-language:EN-US'>(text field) Displays the name of the current
+camera definition file.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:53.4pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l4 level1 lfo2;tab-stops:list 53.4pt'><![if !supportLists]><span
+style='color:blue;mso-ansi-language:EN-US'><span style='mso-list:Ignore'>6.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='mso-ansi-language:EN-US'>(pushbutton) Creates your own camera definition
+file by the default file.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:53.4pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l4 level1 lfo2;tab-stops:list 53.4pt'><![if !supportLists]><span
+style='color:blue;mso-ansi-language:EN-US'><span style='mso-list:Ignore'>7.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='mso-ansi-language:EN-US'>(checkbox) Turns on/off the simulation of the
+spatial resolution of the camera.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:53.4pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l4 level1 lfo2;tab-stops:list 53.4pt'><![if !supportLists]><span
+style='color:blue;mso-ansi-language:EN-US'><span style='mso-list:Ignore'>8.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='mso-ansi-language:EN-US'>(checkbox) Turns on/off attenuation effect
+simulation and correction.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:53.4pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l4 level1 lfo2;tab-stops:list 53.4pt'><![if !supportLists]><span
+style='color:blue;mso-ansi-language:EN-US'><span style='mso-list:Ignore'>9.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='mso-ansi-language:EN-US'>(checkbox) Turns on/off random coincidences
+simulation and corrections.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:53.4pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l4 level1 lfo2;tab-stops:list 53.4pt'><![if !supportLists]><span
+style='color:blue;mso-ansi-language:EN-US'><span style='mso-list:Ignore'>10.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+style='mso-ansi-language:EN-US'>(checkbox) Turns on/off </span><st1:City><st1:place><span
+  style='mso-ansi-language:EN-US'>Compton</span></st1:place></st1:City><span
+style='mso-ansi-language:EN-US'> scatter effect simulation and correction.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:53.4pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l4 level1 lfo2;tab-stops:list 53.4pt'><![if !supportLists]><span
+style='color:blue;mso-ansi-language:EN-US'><span style='mso-list:Ignore'>11.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+style='mso-ansi-language:EN-US'>(line edit) Sets the Poisson noise level
+(between 0 and 1).<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:53.4pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l4 level1 lfo2;tab-stops:list 53.4pt'><![if !supportLists]><span
+style='color:blue;mso-ansi-language:EN-US'><span style='mso-list:Ignore'>12.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+style='mso-ansi-language:EN-US'>(pushbutton) Simulates the predefined PET slice
+with the current parameters, and shows the summed image.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:53.4pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l4 level1 lfo2;tab-stops:list 53.4pt'><![if !supportLists]><span
+style='color:blue;mso-ansi-language:EN-US'><span style='mso-list:Ignore'>13.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+style='mso-ansi-language:EN-US'>(line edit) Displays the name of the output
+file (summed image).<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:53.4pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l4 level1 lfo2;tab-stops:list 53.4pt'><![if !supportLists]><span
+style='color:blue;mso-ansi-language:EN-US'><span style='mso-list:Ignore'>14.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+style='mso-ansi-language:EN-US'>(checkbox) Stores all time frames.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:53.4pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l4 level1 lfo2;tab-stops:list 53.4pt'><![if !supportLists]><span
+style='color:blue;mso-ansi-language:EN-US'><span style='mso-list:Ignore'>15.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+style='mso-ansi-language:EN-US'>(pushbutton) Starts the simulation process for
+the whole segmented MR file.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:53.4pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l4 level1 lfo2;tab-stops:list 53.4pt'><![if !supportLists]><span
+style='color:blue;mso-ansi-language:EN-US'><span style='mso-list:Ignore'>16.<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span></span><![endif]><span
+style='mso-ansi-language:EN-US'>(pushbutton) Exit.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify'><span
+style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:18.0pt'><span
+style='mso-ansi-language:EN-US'>The necessary inputs for the simulations are: segmented
+MR file(s), Tracer kinetic model, blood curve, acquisition times and camera
+definition.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<h1><a name="_Toc80498042"></a><a name="_First_Step:_Loading_the_segmented_M"></a><span
+style='mso-bookmark:_Toc80498042'><span style='mso-ansi-language:EN-US'>First
+Step: Loading the segmented MR file</span></span><span style='mso-ansi-language:
+EN-US'><o:p></o:p></span></h1>
+
+<p class=MsoNormal><span style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='mso-ansi-language:EN-US'>The program can read
+only analyze format files. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><span style='mso-ansi-language:
+EN-US'>Press the<i style='mso-bidi-font-style:normal'> Load Segmented Brain
+Volume</i> button (<span style='color:blue'><a href="#fig1">1</a></span>).
+Choose one or up to 8 files in the file open dialog (<a href="#fig2">Fig. 2.</a>),
+and press the <i style='mso-bidi-font-style:normal'>Add</i> button, then the <i
+style='mso-bidi-font-style:normal'>OK</i> button.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-indent:18.0pt'><span style='mso-ansi-language:
+EN-US'>The simulator can read MR files in three different ways:<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l1 level1 lfo4;tab-stops:list 36.0pt'><![if !supportLists]><span
+style='mso-ansi-language:EN-US'><span style='mso-list:Ignore'>a)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='mso-ansi-language:EN-US'>Reads one file, which should contain maximum 8
+segments, labeled 1<span class=GramE>,2</span>,…,8 whole numbers.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='mso-ansi-language:
+EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l1 level1 lfo4;tab-stops:list 36.0pt'><![if !supportLists]><span
+style='mso-ansi-language:EN-US'><span style='mso-list:Ignore'>b)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='mso-ansi-language:EN-US'>Reads one, two or three files. If the form of
+the selected filename is XXX_seg1.img (containing the gray matter), the
+simulator reads automatically the XXX_seg2.img (the white matter) and
+XXX_seg3.img (the CSF) also, when they exist. In this case you must select only
+the XXX_seg1.img file in the File input dialog. If the <span class=SpellE>voxels</span>
+in these files are between 0 and 255, the simulator converts <span class=GramE>them<span
+style='mso-spacerun:yes'>  </span>into</span> one binary segmented volume as
+follows: The simulator sets the <span class=SpellE>voxels</span> to 0 having a
+cumulative value below 128, (corresponding to &lt;50%) and the <span
+class=SpellE>voxels</span> that are above or equal 128, are set to the segment
+number (1,2, or 3, this depends on the filename). <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='mso-ansi-language:
+EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l1 level1 lfo4;tab-stops:list 36.0pt'><![if !supportLists]><span
+style='mso-ansi-language:EN-US'><span style='mso-list:Ignore'>c)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='mso-ansi-language:EN-US'>Reads maximum 8 files, when you select 8
+different files. The <span class=SpellE>voxel</span> conversion is same as in
+section b). The <span class=SpellE>voxel</span> values of the binary segmented
+volume are labeled 1<span class=GramE>,2</span>,…,8, depending on the order of
+the files. In this case you must select up to 8 files in the File input dialog.
+<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-ansi-language:EN-US'><!--[if gte vml 1]><v:shape id="_x0000_i1025"
+ type="#_x0000_t75" style='width:382.5pt;height:252.75pt'>
+ <v:imagedata src="petsim_manual_elemei/image004.jpg" o:title="petsim_file_load"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=510 height=337
+src="petsim_manual_elemei/image004.jpg" v:shapes="_x0000_i1025"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><a name="_Toc80498043"></a><a
+name=fig2><span style='mso-bookmark:_Toc80498043'><span style='font-size:10.0pt;
+mso-ansi-language:EN-US'>Figure </span></span></a><span class=GramE><span
+style='mso-bookmark:fig2'><span style='mso-bookmark:_Toc80498043'><span
+style='font-size:10.0pt;mso-ansi-language:EN-US'>2</span></span></span><span
+style='font-size:10.0pt;mso-ansi-language:EN-US'>.:</span></span><span
+style='font-size:10.0pt;mso-ansi-language:EN-US'> File open dialog<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:10.0pt;mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='mso-ansi-language:EN-US'>After loading, the program shows the axial,
+coronal and <span class=SpellE>sagittal</span> slices of the segmented MRI file
+(Figure 3.)<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:10.0pt;mso-ansi-language:EN-US'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1026" type="#_x0000_t75" style='width:534pt;height:190.5pt'>
+ <v:imagedata src="petsim_manual_elemei/image006.jpg" o:title="petsim_acs"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=712 height=254
+src="petsim_manual_elemei/image012.jpg" v:shapes="_x0000_i1026"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><a name="_Toc80498044"></a><a
+name=fig3><span style='mso-bookmark:_Toc80498044'></span></a><span
+class=SpellE><span style='mso-bookmark:fig3'><span style='mso-bookmark:_Toc80498044'><span
+lang=HU style='font-size:10.0pt'>Figure</span></span></span></span><span
+style='mso-bookmark:fig3'><span style='mso-bookmark:_Toc80498044'><span
+lang=HU style='font-size:10.0pt'> 3</span></span></span><span style='mso-bookmark:
+_Toc80498044'></span><span style='mso-bookmark:fig3'></span><span class=GramE><span
+style='font-size:10.0pt;mso-ansi-language:EN-US'>.:</span></span><span
+style='font-size:10.0pt;mso-ansi-language:EN-US'> The axial, coronal and <span
+class=SpellE>sagittal</span> views of the segmented MRI file<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<h1><a name="_Toc80498045"></a><a name="_Second_step:_Tracer_Model_Setup"></a><span
+style='mso-bookmark:_Toc80498045'><span style='mso-ansi-language:EN-US'>Second
+step: Tracer Model Setup</span></span><span style='mso-ansi-language:EN-US'><o:p></o:p></span></h1>
+
+<p class=MsoNormal><span style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='mso-ansi-language:EN-US'>The simulator uses the 4-compartment tracer
+kinetic model to determine activity distribution in the human brain. The 3- and
+2-compartment models are special <span class=GramE>versions<span
+style='mso-spacerun:yes'>  </span>of</span> the 4-compartment model, when the
+k5, k6 and k3, k4 kinetic constants are 0. The 4-compartment model and
+interpretation of the kinetic constants are shown in Figure 4.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-ansi-language:EN-US'><!--[if gte vml 1]><v:shape id="_x0000_i1027"
+ type="#_x0000_t75" style='width:397.5pt;height:300pt'>
+ <v:imagedata src="petsim_manual_elemei/image008.png" o:title="ViewModel"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=530 height=400
+src="petsim_manual_elemei/image013.gif" v:shapes="_x0000_i1027"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><a name="_Toc80498046"></a><a
+name=fig4><span style='mso-bookmark:_Toc80498046'></span></a><span
+class=SpellE><span style='mso-bookmark:fig4'><span style='mso-bookmark:_Toc80498046'><span
+lang=HU style='font-size:10.0pt'>Figure</span></span></span></span><span
+style='mso-bookmark:fig4'><span style='mso-bookmark:_Toc80498046'><span
+lang=HU style='font-size:10.0pt'> 4</span></span></span><span style='mso-bookmark:
+_Toc80498046'></span><span style='mso-bookmark:fig4'></span><span class=GramE><span
+style='font-size:10.0pt;mso-ansi-language:EN-US'>.:</span></span><span
+style='font-size:10.0pt;mso-ansi-language:EN-US'> The 4-compartment tracer
+kinetic model<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='mso-ansi-language:
+EN-US'>Press the <i style='mso-bidi-font-style:normal'>Tracer Model Setup</i>
+button (<span style='color:blue'><a href="#fig1">3</a></span>). The tracer
+model dialog is shown in Figure&nbsp;5. The color codes of the different
+segments correspond to the colors of the loaded MRI file (<a href="#fig3">Figure
+3</a>.).<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-ansi-language:EN-US'><!--[if gte vml 1]><v:shape id="_x0000_i1030"
+ type="#_x0000_t75" style='width:666.75pt;height:474.75pt'>
+ <v:imagedata src="petsim_manual_elemei/image014.jpg" o:title="tarcermodel_with_flags"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=889 height=633
+src="petsim_manual_elemei/image015.jpg" v:shapes="_x0000_i1030"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><a name="_Toc80498047"></a><a
+name=fig5><span style='mso-bookmark:_Toc80498047'></span></a><span
+class=SpellE><span style='mso-bookmark:fig5'><span style='mso-bookmark:_Toc80498047'><span
+lang=HU style='font-size:10.0pt'>Figure</span></span></span></span><span
+style='mso-bookmark:fig5'><span style='mso-bookmark:_Toc80498047'><span
+lang=HU style='font-size:10.0pt'> 5</span></span></span><span style='mso-bookmark:
+_Toc80498047'></span><span style='mso-bookmark:fig5'></span><span class=GramE><span
+style='font-size:10.0pt;mso-ansi-language:EN-US'>.:</span></span><span
+style='font-size:10.0pt;mso-ansi-language:EN-US'> The tracer model setup dialog<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:14.0pt;mso-ansi-language:EN-US'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1028" type="#_x0000_t75" style='width:484.5pt;height:528pt'>
+ <v:imagedata src="petsim_manual_elemei/image020.jpg" o:title="petsim_blood_curves"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=646 height=704
+src="petsim_manual_elemei/image016.jpg" v:shapes="_x0000_i1028"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><a name=fig6><span
+style='font-size:10.0pt;mso-ansi-language:EN-US'>Figure </span></a><span
+class=GramE><span style='mso-bookmark:fig6'><span style='font-size:10.0pt;
+mso-ansi-language:EN-US'>6</span></span><span style='font-size:10.0pt;
+mso-ansi-language:EN-US'>.:</span></span><span style='font-size:10.0pt;
+mso-ansi-language:EN-US'> Predefined blood curves<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:10.0pt;mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;mso-ansi-language:EN-US'>Steps
+of tracer model setup:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='mso-ansi-language:
+EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='mso-ansi-language:
+EN-US'>Load a predefined tracer kinetic model (press the <i style='mso-bidi-font-style:
+normal'>Load a model</i> button (<span style='color:blue'><a href="#fig5">17</a></span><span
+class=GramE>) )</span>, or enter the tracer kinetic constants (<span
+style='color:blue'><a href="#fig5">19</a></span>). (To store the current
+kinetic constants, press the <i style='mso-bidi-font-style:normal'>Save the
+model </i>button (<span style='color:blue'><a href="#fig5">17</a></span><span
+class=GramE>) )</span>.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='mso-ansi-language:
+EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<h2 style='margin-left:27.0pt'><a name="_Toc80498048"><span style='mso-ansi-language:
+EN-US'>Setup frame times</span></a><span style='mso-ansi-language:EN-US'><o:p></o:p></span></h2>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l3 level1 lfo6;tab-stops:list 36.0pt'><![if !supportLists]><span
+style='mso-ansi-language:EN-US'><span style='mso-list:Ignore'>a)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='mso-ansi-language:EN-US'>Setting up manually: Press the <i
+style='mso-bidi-font-style:normal'>Setup Frame Times</i> button (<span
+style='color:blue'><a href="#fig5">20</a></span>), and enter the <i
+style='mso-bidi-font-style:normal'>Frame Step</i> in minutes and the <i
+style='mso-bidi-font-style:normal'>Number of steps</i>.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l3 level1 lfo6;tab-stops:list 36.0pt'><![if !supportLists]><span
+style='mso-ansi-language:EN-US'><span style='mso-list:Ignore'>b)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='mso-ansi-language:EN-US'>Setting up from file: Press the <i
+style='mso-bidi-font-style:normal'>Load times from file</i> button (<span
+style='color:blue'><a href="#fig5">20</a></span>) and select the file. The file
+is a simply text file, the column should contain the frame lengths (in minutes)
+of the study. ( See sample file: frametimes_c11.txt )<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt'><span style='mso-ansi-language:
+EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<h2 style='margin-left:27.0pt'><a name="_Toc80498049"><span style='mso-ansi-language:
+EN-US'>Define blood curve</span></a><span style='mso-ansi-language:EN-US'><o:p></o:p></span></h2>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l0 level1 lfo8;tab-stops:list 36.0pt'><![if !supportLists]><span
+style='mso-ansi-language:EN-US'><span style='mso-list:Ignore'>a)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='mso-ansi-language:EN-US'>Using predefined curves: Type the number of the
+predefined blood curve into the <i style='mso-bidi-font-style:normal'>Blood
+curve type</i> field (<span style='color:blue'><a href="#fig5">21</a></span>).
+The <i style='mso-bidi-font-style:normal'>Plot Blood Curve Types</i> button
+shows the predefined blood curves (<a href="#fig6">Figure 6</a>.).<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l0 level1 lfo8;tab-stops:list 36.0pt'><![if !supportLists]><span
+style='mso-ansi-language:EN-US'><span style='mso-list:Ignore'>b)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='mso-ansi-language:EN-US'>Loading own blood curve: press the <i
+style='mso-bidi-font-style:normal'>Load curve from file</i> button (<span
+style='color:blue'><a href="#fig5">21</a></span>), and select your blood curve.
+In this case, the filename will be displayed in the <i style='mso-bidi-font-style:
+normal'>Blood curve type</i> field. The blood curve file is a simply text file.
+The first column should contain the time scale of the blood curve (in
+minutes),<span style='mso-spacerun:yes'>  </span>the second column should
+contain the corresponding activity concentration values in <span class=SpellE>nCi</span>/ml.
+(See sample file: mybloodcurve1.txt)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify'><span
+style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-align:justify;text-indent:
+-27.0pt'><a name="_Toc80498050"></a><span class=SpellE><span style='mso-bookmark:
+_Toc80498050'><span class=Cmsor2Char><span lang=HU style='font-size:14.0pt'>Specify</span></span></span></span><span
+style='mso-bookmark:_Toc80498050'><span class=Cmsor2Char><span lang=HU
+style='font-size:14.0pt'> <span class=SpellE>the</span> <span class=SpellE>pharmacon</span></span></span></span><span
+style='mso-bookmark:_Toc80498050'></span><span style='mso-ansi-language:EN-US'>:
+Choose the isotope (<span style='color:blue'><a href="#fig5">22</a></span>).
+The default is the <i style='mso-bidi-font-style:normal'>C-<span class=GramE>11<span
+style='font-style:normal'>,</span></span></i> currently available isotopes in
+the simulator are <i style='mso-bidi-font-style:normal'>C-11</i>, <i
+style='mso-bidi-font-style:normal'>F-18</i>, <i style='mso-bidi-font-style:
+normal'>O-15</i> and <i style='mso-bidi-font-style:normal'>N-13</i>.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify'><span
+style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-align:justify;text-indent:
+-27.0pt'><a name="_Toc80498051"></a><span class=SpellE><span style='mso-bookmark:
+_Toc80498051'><span class=Cmsor2Char><span lang=HU style='font-size:14.0pt'>Specify</span></span></span></span><span
+style='mso-bookmark:_Toc80498051'><span class=Cmsor2Char><span lang=HU
+style='font-size:14.0pt'> <span class=SpellE>the</span> <span class=SpellE>time</span>
+<span class=SpellE>interval</span></span></span></span><span style='mso-bookmark:
+_Toc80498051'></span><span style='mso-ansi-language:EN-US'> of the summed
+image: Enter the time from and time to in minutes (field <span
+style='color:blue'><a href="#fig5">22</a></span>). The simulator calculates the
+summed image by these values. Note: If you do not specify these values, the
+summed slices will contain only 0 <span class=SpellE>voxels</span>.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify'><span
+style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-align:justify;text-indent:
+-27.0pt'><a name="_Toc80498052"></a><span class=SpellE><span style='mso-bookmark:
+_Toc80498052'><span class=Cmsor2Char><span lang=HU style='font-size:14.0pt'>Visualize</span></span></span></span><span
+style='mso-bookmark:_Toc80498052'><span class=Cmsor2Char><span lang=HU
+style='font-size:14.0pt'> <span class=SpellE>the</span> <span class=SpellE>current</span>
+TACT <span class=SpellE>curves</span></span></span></span><span
+style='mso-bookmark:_Toc80498052'></span><span style='mso-ansi-language:EN-US'>:
+Press the <i style='mso-bidi-font-style:normal'>Show TACT curves</i> button (<span
+style='color:blue'><a href="#fig5">23</a></span>), this displays the TACT
+curves, with the current settings.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt;text-align:justify'><span
+style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:54.0pt;text-align:justify;text-indent:
+-27.0pt'><a name="_Toc80498053"></a><span class=SpellE><span style='mso-bookmark:
+_Toc80498053'><span class=Cmsor2Char><span lang=HU style='font-size:14.0pt'>Close</span></span></span></span><span
+style='mso-bookmark:_Toc80498053'><span class=Cmsor2Char><span lang=HU
+style='font-size:14.0pt'> <span class=SpellE>dialog</span></span></span></span><span
+style='mso-bookmark:_Toc80498053'></span><span style='mso-ansi-language:EN-US'>:
+Press the <i style='mso-bidi-font-style:normal'>Apply Changes</i> button (<span
+style='color:blue'><a href="#fig5">24</a></span>) to apply current tracer model
+settings.</span><span lang=HU style='font-size:14.0pt;font-family:Arial;
+mso-bidi-font-weight:bold;mso-bidi-font-style:italic'><o:p></o:p></span></p>
+
+<h1><a name="_Toc80498054"><span style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></a></h1>
+
+<h1><span style='mso-bookmark:_Toc80498054'><a
+name="_Third_Step:_Specify_the_PET_camera_"></a><span style='mso-ansi-language:
+EN-US'>Third Step: Specify the PET camera parameters</span></span><span
+style='mso-ansi-language:EN-US'><o:p></o:p></span></h1>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-36.0pt'><span style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='mso-ansi-language:EN-US'>The most commonly applied camera parameters are
+stored in a text file, with extension ‘<b style='mso-bidi-font-weight:normal'>def</b>’.
+The default camera file is the <b style='mso-bidi-font-weight:normal'>GE4096.def
+</b>(<a href="#_Appendix_1">Appendix 1</a>), describing the parameters of the <i
+style='mso-bidi-font-style:normal'>GE4096plus</i> PET scanner. This is the
+automatically loaded file. To load your own camera definition file, press the <i
+style='mso-bidi-font-style:normal'>Load scanner definition file</i> button (<span
+style='color:blue'><a href="#fig1">4</a></span>) and choose a file. The file
+name will be displayed below the button.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='mso-ansi-language:EN-US'>To create your own definition file, press the <i
+style='mso-bidi-font-style:normal'>Create definition file</i> button (<span
+style='color:blue'><a href="#fig1">6</a></span>), then type the new file name.
+This function saves the default definition file (<b style='mso-bidi-font-weight:
+normal'>GE4096.def</b>) as “<span class=SpellE><i style='mso-bidi-font-style:
+normal'>newname</i></span><i style='mso-bidi-font-style:normal'>”</i> and opens
+it in the <b style='mso-bidi-font-weight:normal'>Matlab Editor</b>.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<h1><a name="_Toc80498055"></a><a name="_Fourth_step:_Select_acquisition_eff"></a><span
+style='mso-bookmark:_Toc80498055'><span style='mso-ansi-language:EN-US'>Fourth
+step: Select acquisition effects</span></span><span style='mso-ansi-language:
+EN-US'><o:p></o:p></span></h1>
+
+<p class=MsoNormal style='text-align:justify'><span style='mso-ansi-language:
+EN-US'><span style='mso-tab-count:1'>            </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='mso-ansi-language:
+EN-US'>The checkboxes in the <i style='mso-bidi-font-style:normal'>Acquisition
+frame </i>control the distortion effects and the corrections during the
+simulation process.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='mso-ansi-language:
+EN-US'><span style='mso-tab-count:1'>            </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:53.4pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l2 level1 lfo10;tab-stops:list 53.4pt'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol;mso-ansi-language:EN-US'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-ansi-language:EN-US'>Button <span
+style='color:blue'><a href="#fig1">7</a> </span>turns on/off the simulation of
+the spatial resolution of the camera.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:53.4pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l2 level1 lfo10;tab-stops:list 53.4pt'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol;mso-ansi-language:EN-US'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-ansi-language:EN-US'>Button <span
+style='color:blue'><a href="#fig1">8</a></span> turns on/off attenuation effect
+simulation and correction. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:53.4pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l2 level1 lfo10;tab-stops:list 53.4pt'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol;mso-ansi-language:EN-US'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-ansi-language:EN-US'>Button <span
+style='color:blue'><a href="#fig1">9</a></span> turns on/off random
+coincidences simulation and corrections. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:53.4pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l2 level1 lfo10;tab-stops:list 53.4pt'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol;mso-ansi-language:EN-US'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-ansi-language:EN-US'>Button <span
+style='color:blue'><a href="#fig1">10</a> </span>turns on/off </span><st1:City><st1:place><span
+  style='mso-ansi-language:EN-US'>Compton</span></st1:place></st1:City><span
+style='mso-ansi-language:EN-US'> <span class=GramE>scatter</span> effect
+simulation and correction. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify'><span
+style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:35.4pt;text-align:justify'><span
+style='mso-bidi-font-size:10.0pt;mso-ansi-language:EN-US;mso-fareast-language:
+EN-US'>Each physical effect is simulated as a <b style='mso-bidi-font-weight:
+normal'>Poisson</b> process. The default <i style='mso-bidi-font-style:normal'>Poisson
+noise level</i> is 1. You can specify other levels in the noise level field (</span><span
+style='color:blue;mso-ansi-language:EN-US;mso-fareast-language:EN-US'><a
+href="#fig1">11</a></span><span style='mso-bidi-font-size:10.0pt;mso-ansi-language:
+EN-US;mso-fareast-language:EN-US'>). The level value must be between 0 and 1.
+If the value is less than 0 or greater than 1, the simulator will convert it to
+0 or 1.</span><span style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='mso-ansi-language:EN-US'>To simulate and correct all distortion
+processes, please turn on all checkboxes. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify;text-indent:
+-36.0pt'><b style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:
+normal'><span style='font-size:14.0pt;mso-ansi-language:EN-US'>Note</span></i></b><span
+style='mso-ansi-language:EN-US'>: The specification order of the <b
+style='mso-bidi-font-weight:normal'><a
+href="#_First_Step:_Loading_the_segmented_M">first</a></b>, <b
+style='mso-bidi-font-weight:normal'><a href="#_Second_step:_Tracer_Model_Setup">second</a></b>,
+<b style='mso-bidi-font-weight:normal'><a
+href="#_Third_Step:_Specify_the_PET_camera_"><span class=GramE>third</span></a></b><span
+class=GramE> and <b style='mso-bidi-font-weight:normal'><a
+href="#_Fourth_step:_Select_acquisition_eff">fourth</a></b> steps is</span>
+arbitrary. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='mso-ansi-language:
+EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<h1><a name="_Toc80498056"><span style='mso-ansi-language:EN-US'>Fifth Step:
+Simulation preview</span></a><span style='mso-ansi-language:EN-US'> <o:p></o:p></span></h1>
+
+<p class=MsoNormal style='text-align:justify'><span style='mso-ansi-language:
+EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='mso-ansi-language:EN-US'>You can preview the result of the simulation by
+pressing the <i style='mso-bidi-font-style:normal'>Show Preview</i> button (<span
+style='color:blue'><a href="#fig1">12</a></span>). This procedure simulates the
+specified axial PET slice using the current parameters, such as tracer kinetic
+constants, time frames, blood curve, isotope type, summation interval,
+distortion effects and Poisson level. The result of the simulation is shown in
+a separate window. This takes approx. 3 minutes <span class=GramE>on<span
+style='mso-spacerun:yes'>  </span>one</span> 2.8 GHz processor. The simulator
+does not store the preview data set. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='mso-ansi-language:
+EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<h1><a name="_Toc80498057"></a><a name="_Sixth_Step:_Specify_the_output_file"></a><span
+style='mso-bookmark:_Toc80498057'><span style='mso-ansi-language:EN-US'>Sixth
+Step: Specify the output file</span></span><span style='mso-ansi-language:EN-US'><o:p></o:p></span></h1>
+
+<p class=MsoNormal style='text-align:justify'><span style='mso-ansi-language:
+EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='mso-ansi-language:EN-US'>Please type the output file name with full path
+to the <i style='mso-bidi-font-style:normal'>Output filename</i> field (<span
+style='color:blue'><a href="#fig1">13</a></span>), before running the whole
+simulation process (The <span class=GramE>extension<span
+style='mso-spacerun:yes'>  </span>is</span> not necessary).<span
+style='mso-spacerun:yes'>  </span>The output file format is <span class=GramE><i
+style='mso-bidi-font-style:normal'>analyze</i></span>. If you check the <i
+style='mso-bidi-font-style:normal'>Save each time frames</i> </span><st1:address><st1:Street><span
+  style='mso-ansi-language:EN-US'>box</span></st1:Street><span
+ style='mso-ansi-language:EN-US'> (<span style='color:blue'><a href="#fig1">14</a></span>)</span></st1:address><span
+style='mso-ansi-language:EN-US'>, the program saves all time frames into one
+dynamic analyze file called “<span class=SpellE><i style='mso-bidi-font-style:
+normal'>outputname</i>”_frames.img</span> and “<span class=SpellE><i
+style='mso-bidi-font-style:normal'>outputname</i>”_frames.hdr</span>, where the
+“<span class=SpellE><i style='mso-bidi-font-style:normal'>outputname</i></span>”
+is the value of the <i style='mso-bidi-font-style:normal'>Output filename</i>
+field (<span style='color:blue'><a href="#fig1">13</a></span>).<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='mso-ansi-language:
+EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='mso-ansi-language:
+EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<h1><span style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'> </span><a name="_Toc80498058">Seventh step: Start the
+simulation</a><o:p></o:p></span></h1>
+
+<p class=MsoNormal style='text-align:justify'><span style='mso-ansi-language:
+EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='mso-ansi-language:
+EN-US'><span style='mso-tab-count:1'>            </span>Press the <i
+style='mso-bidi-font-style:normal'>Start</i> button (<span style='color:blue'><a
+href="#fig1">15</a></span>) to start the simulation for the whole segmented MRI
+slices. Simulation time strongly depends on the number of time frames and the <span
+class=SpellE>voxel</span> number of the segmented MRI volume to be simulated.
+More time frames and bigger volumes require longer calculation time. E.g.: The
+whole simulation takes about 2 hours on <span class=GramE>one<span
+style='mso-spacerun:yes'>  </span>2.8</span> GHz processor, if the numbers of
+voxels are 60x217x181 and the number of time frames is 34. When the simulation
+process is finished, the summed image and the images of the time frames are
+stored automatically, with the specified file name. (See <a
+href="#_Sixth_Step:_Specify_the_output_file">Sixth step</a>)<o:p></o:p></span></p>
+
+<span style='font-size:16.0pt;font-family:Arial;mso-fareast-font-family:"Times New Roman";
+mso-font-kerning:16.0pt;mso-ansi-language:EN-US;mso-fareast-language:HU;
+mso-bidi-language:AR-SA'><br clear=all style='page-break-before:always'>
+</span>
+
+<h1><a name="_Toc80498059"></a><a name="_Appendix_1"></a><span
+style='mso-bookmark:_Toc80498059'><span style='mso-ansi-language:EN-US'>Appendix
+1</span></span><span style='mso-ansi-language:EN-US'><o:p></o:p></span></h1>
+
+<p class=MsoNormal style='text-align:justify'><span style='mso-ansi-language:
+EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='mso-ansi-language:
+EN-US'>The structure of the GE4096.def file: The <span class=GramE>italicized<span
+style='mso-spacerun:yes'>  </span>texts</span> are not part of the real file,
+they are only comments here.<o:p></o:p></span></p>
+
+<p class=MsoPlainText><span lang=HU><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText><span lang=HU><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText><span style='mso-ansi-language:EN-US'>The file is a
+simple text file, with extension def.<o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText style='text-align:justify'><span style='mso-ansi-language:
+EN-US'>The simulator reads only those single lines, which include the = symbol.
+All other lines are comments.<o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText><span style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText><span style='mso-ansi-language:EN-US'>General camera
+parameters: (Sample data of the GE4096 PET scanner)<o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText><span style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText><span style='mso-ansi-language:EN-US'>FOV=550<span
+style='mso-tab-count:2'>           </span></span><i style='mso-bidi-font-style:
+normal'><span style='font-size:12.0pt;font-family:"Times New Roman";mso-ansi-language:
+EN-US'>: The field of view of the scanner, in millimeters</span></i><span
+style='font-size:12.0pt;font-family:"Times New Roman";mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:108.0pt;text-align:justify;text-indent:
+-108.0pt'><span class=GramE><span style='mso-ansi-language:EN-US'>members=</span></span><span
+style='mso-ansi-language:EN-US'>96<span style='mso-tab-count:1'>        </span></span><i
+style='mso-bidi-font-style:normal'><span style='font-size:12.0pt;font-family:
+"Times New Roman";mso-bidi-font-family:"Courier New";mso-ansi-language:EN-US'>:
+The number of projections in the x direction (see radon transform, e.g. Matlab
+Help, or PhD thesis of Peter <span class=SpellE>Toft</span>)<o:p></o:p></span></i></p>
+
+<p class=MsoPlainText><span style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText><span class=GramE><span style='mso-ansi-language:EN-US'>theta</span></span><span
+style='mso-ansi-language:EN-US'>=[270:-180/511:90]<span style='mso-tab-count:
+1'> </span></span><span style='font-size:12.0pt;font-family:"Times New Roman";
+mso-bidi-font-family:"Courier New";mso-ansi-language:EN-US'>: <i
+style='mso-bidi-font-style:normal'>The projection angles in degrees and Matlab
+format</i><o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText><span class=SpellE><span class=GramE><span
+style='mso-ansi-language:EN-US'>projectionOffset</span></span></span><span
+class=GramE><span style='mso-ansi-language:EN-US'>=</span></span><span
+style='mso-ansi-language:EN-US'>0<span style='mso-tab-count:1'>      </span></span><i
+style='mso-bidi-font-style:normal'><span style='font-size:12.0pt;font-family:
+"Times New Roman";mso-bidi-font-family:"Courier New";mso-ansi-language:EN-US'>:
+The start of the first projection line, in degrees</span></i><span
+style='font-size:12.0pt;font-family:"Times New Roman";mso-bidi-font-family:
+"Courier New";mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText><span class=SpellE><span class=GramE><span
+style='mso-ansi-language:EN-US'>calibrationFactor</span></span></span><span
+class=GramE><span style='mso-ansi-language:EN-US'>=</span></span><span
+style='mso-ansi-language:EN-US'>2.8e5<span style='mso-tab-count:1'> </span></span><i
+style='mso-bidi-font-style:normal'><span style='font-size:12.0pt;font-family:
+"Times New Roman";mso-bidi-font-family:"Courier New";mso-ansi-language:EN-US'>:
+The camera acquisition efficiency with GE68 line source</span></i><span
+style='font-size:12.0pt;font-family:"Times New Roman";mso-bidi-font-family:
+"Courier New";mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText><span class=SpellE><span class=GramE><span
+style='mso-ansi-language:EN-US'>voxelSize</span></span></span><span
+class=GramE><span style='mso-ansi-language:EN-US'>=</span></span><span
+style='mso-ansi-language:EN-US'>0.048<span style='mso-tab-count:2'>         </span></span><i
+style='mso-bidi-font-style:normal'><span style='font-size:12.0pt;font-family:
+"Times New Roman";mso-bidi-font-family:"Courier New";mso-ansi-language:EN-US'>:
+The volume of one <span class=SpellE>voxel</span> in ml.</span></i><span
+style='font-size:12.0pt;font-family:"Times New Roman";mso-bidi-font-family:
+"Courier New";mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText><span class=SpellE><span class=GramE><span
+style='mso-ansi-language:EN-US'>pixelSize</span></span></span><span
+class=GramE><span style='mso-ansi-language:EN-US'>=</span></span><span
+style='mso-ansi-language:EN-US'>2<span style='mso-tab-count:3'>             </span></span><i
+style='mso-bidi-font-style:normal'><span style='font-size:12.0pt;font-family:
+"Times New Roman";mso-bidi-font-family:"Courier New";mso-ansi-language:EN-US'>:
+The size of one pixel on the axial slice (in millimeters)<o:p></o:p></span></i></p>
+
+<p class=MsoPlainText><span style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:198.0pt;text-align:justify;text-indent:
+-198.0pt'><span class=SpellE><span class=GramE><span style='mso-ansi-language:
+EN-US'>radialResolutionValues</span></span></span><span class=GramE><span
+style='mso-ansi-language:EN-US'>=</span></span><span style='mso-ansi-language:
+EN-US'>6 6.5 7<span style='mso-tab-count:1'>   </span></span><i
+style='mso-bidi-font-style:normal'><span style='font-size:12.0pt;font-family:
+"Times New Roman";mso-bidi-font-family:"Courier New";mso-ansi-language:EN-US'>:
+The FWHM of a line source on the axial slice by different radius (in
+millimeters), <o:p></o:p></span></i></p>
+
+<p class=MsoPlainText style='margin-left:198.0pt;text-align:justify;text-indent:
+-198.0pt'><span class=SpellE><span class=GramE><span style='mso-ansi-language:
+EN-US'>radialResolutionRadius</span></span></span><span class=GramE><span
+style='mso-ansi-language:EN-US'>=</span></span><span style='mso-ansi-language:
+EN-US'>0 100&nbsp;200</span><span style='font-size:12.0pt;font-family:"Times New Roman";
+mso-ansi-language:EN-US'> <i style='mso-bidi-font-style:normal'>: and the
+corresponded</i></span><i style='mso-bidi-font-style:normal'><span
+style='font-size:12.0pt;font-family:"Times New Roman";mso-bidi-font-family:
+"Courier New";mso-ansi-language:EN-US'> radius values (in millimeters)<o:p></o:p></span></i></p>
+
+<p class=MsoPlainText><span style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:198.0pt;text-indent:-198.0pt'><span
+class=SpellE><span class=GramE><span style='mso-ansi-language:EN-US'>axialPixelSize</span></span></span><span
+class=GramE><span style='mso-ansi-language:EN-US'>=</span></span><span
+style='mso-ansi-language:EN-US'>6.5<span style='mso-tab-count:1'>               </span></span><i
+style='mso-bidi-font-style:normal'><span style='font-size:12.0pt;font-family:
+"Times New Roman";mso-ansi-language:EN-US'>: </span></i><i style='mso-bidi-font-style:
+normal'><span style='font-size:12.0pt;font-family:"Times New Roman";mso-bidi-font-family:
+"Courier New";mso-ansi-language:EN-US'>The width of the axial slices (in
+millimeters)</span></i><span style='font-size:12.0pt;font-family:"Times New Roman";
+mso-bidi-font-family:"Courier New";mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText style='margin-left:198.0pt;text-align:justify;text-indent:
+-198.0pt'><span class=SpellE><span class=GramE><span style='mso-ansi-language:
+EN-US'>axialResolutionValues</span></span></span><span class=GramE><span
+style='mso-ansi-language:EN-US'>=</span></span><span style='mso-ansi-language:
+EN-US'>6 6.5 7<span style='mso-tab-count:1'>    </span></span><i
+style='mso-bidi-font-style:normal'><span style='font-size:12.0pt;font-family:
+"Times New Roman";mso-ansi-language:EN-US'>: The FWHM of a line source along
+the Z axis of the camera by different Z values (in millimeters), <o:p></o:p></span></i></p>
+
+<p class=MsoPlainText style='margin-left:198.0pt;text-indent:-198.0pt'><span
+class=SpellE><span class=GramE><span style='mso-ansi-language:EN-US'>axialResolutionRadius</span></span></span><span
+class=GramE><span style='mso-ansi-language:EN-US'>=</span></span><span
+style='mso-ansi-language:EN-US'>0 100 200<span style='mso-tab-count:1'>  </span></span><i
+style='mso-bidi-font-style:normal'><span style='font-size:12.0pt;font-family:
+"Times New Roman";mso-bidi-font-family:"Courier New";mso-ansi-language:EN-US'>:
+and the corresponding Z values (in millimeters</span></i><span
+style='font-size:12.0pt;font-family:"Times New Roman";mso-bidi-font-family:
+"Courier New";mso-ansi-language:EN-US'>)<o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText><span style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText><span style='mso-ansi-language:EN-US'>Random effect
+parameters:<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='text-align:justify'><i style='mso-bidi-font-style:
+normal'><span style='font-size:12.0pt;font-family:"Times New Roman";mso-ansi-language:
+EN-US'>The random effect is described by the out = in / <span class=SpellE>randomEffectConstant</span>
+term and the random correction is described by the<o:p></o:p></span></i></p>
+
+<p class=MsoPlainText style='text-align:justify'><span class=GramE><i
+style='mso-bidi-font-style:normal'><span style='font-size:12.0pt;font-family:
+"Times New Roman";mso-ansi-language:EN-US'>out</span></i></span><i
+style='mso-bidi-font-style:normal'><span style='font-size:12.0pt;font-family:
+"Times New Roman";mso-ansi-language:EN-US'> = <span class=SpellE>randomCorrectionConstants</span>(1)*in^2+randomCorrectionConstants(2)*in
+equation.<o:p></o:p></span></i></p>
+
+<p class=MsoPlainText><span style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText><span class=SpellE><span class=GramE><span
+style='mso-ansi-language:EN-US'>randomEffectConstant</span></span></span><span
+class=GramE><span style='mso-ansi-language:EN-US'>=</span></span><span
+style='mso-ansi-language:EN-US'>1.0014<o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText><span class=SpellE><span class=GramE><span
+style='mso-ansi-language:EN-US'>randomCorrectionConstants</span></span></span><span
+class=GramE><span style='mso-ansi-language:EN-US'>=</span></span><span
+style='mso-ansi-language:EN-US'>0.0375 0.161<o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText><span style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText style='text-align:justify'><span style='mso-ansi-language:
+EN-US'>Scatter parameters: <span class=GramE>( To</span> measure these
+parameters on your camera, see <span class=SpellE>H.Hoverath</span>: Scatter
+correction in the axial slices of a whole-body positron emission tomography.
+Phys. Med. Biol. 38(1993) 717-728.<o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoPlainText><span class=GramE><span style='mso-ansi-language:EN-US'>scale=</span></span><span
+style='mso-ansi-language:EN-US'>2.5517<o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='mso-ansi-language:EN-US'>A1=1.6702e-3<o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='mso-ansi-language:EN-US'>A2=1.464<o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='mso-ansi-language:EN-US'>A3=2.145e-3<o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='mso-ansi-language:EN-US'>A4=1.352<o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='mso-ansi-language:EN-US'>A5=5.664e-2<o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='mso-ansi-language:EN-US'>A6=1.584e-2<o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='mso-ansi-language:EN-US'>A7=1.203<o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='mso-ansi-language:EN-US'>A8=0.2037<o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='mso-ansi-language:EN-US'>A10=1.195<o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='mso-ansi-language:EN-US'>A11=0.279<o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='mso-ansi-language:EN-US'>A12=0<o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='mso-ansi-language:EN-US'>A13=1.0907e-2<o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='mso-ansi-language:EN-US'>A14=0.6526e-2<o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='mso-ansi-language:EN-US'>A15=1.104<o:p></o:p></span></p>
+
+<p class=MsoPlainText><span lang=DE style='mso-ansi-language:DE'>A16=9.334e-2<o:p></o:p></span></p>
+
+<p class=MsoPlainText><span lang=DE style='mso-ansi-language:DE'>A18=1.77e-2<o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='mso-ansi-language:EN-US'>A21=0.118e-2<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='mso-ansi-language:
+EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='mso-ansi-language:
+EN-US'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='mso-ansi-language:
+EN-US'><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

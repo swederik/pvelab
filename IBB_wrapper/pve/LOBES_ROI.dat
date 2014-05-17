@@ -1,0 +1,16 @@
+Report ROI coding #, ROI Name and color in exaddecimal, separated by a <Tab> hereinafter, with no space at the end
+51	CBL	008080
+55	LR_FRO	008000
+56	MR_FRO	008040
+59	LR_TEM	0000ff
+60	MR_TEM	0040ff
+63	R_OCC	ff0000
+67	LR_PAR	800080
+68	MR_PAR	804080
+95	ML_FRO	00ff00
+96	LL_FRO	00ff40
+99	ML_TEM	000080
+100	LL_TEM	004080
+103	L_OCC	ff4000
+107	ML_PAR	ff00ff
+108	LL_PAR	ff40ff

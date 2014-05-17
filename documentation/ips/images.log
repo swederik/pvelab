@@ -1,0 +1,303 @@
+This is TeX, Version 3.14159 (Web2C 7.3.1) (format=latex 2004.1.9)  23 JUL 2004 16:54
+**./images.tex
+(./images.tex
+LaTeX2e <2001/06/01>
+Babel <v3.7h> and hyphenation patterns for american, french, german, ngerman, d
+anish, nohyphenation, loaded.
+
+(/usr/share/texmf/tex/latex/base/article.cls
+Document Class: article 2001/04/21 v1.4e Standard LaTeX document class
+(/usr/share/texmf/tex/latex/base/size12.clo
+File: size12.clo 2001/04/21 v1.4e Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (/usr/share/texmf/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+) (/usr/share/texmf/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/share/texmf/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+) (/usr/share/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 2001/07/07 v1.0n Standard LaTeX Graphics (DPC,SPQR)
+(/usr/share/texmf/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+) (/usr/share/texmf/tex/latex/config/graphics.cfg)
+Package graphics Info: Driver file: dvips.def on input line 80.
+(/usr/share/texmf/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+) (/usr/share/texmf/tex/latex/html/html.sty
+Package: html 1999/07/19 v1.38 hypertext commands for latex2html (nd, hws, rrm)
+
+\c@lpart=\count87
+\c@lchapter=\count88
+\c@chapter=\count89
+\c@lsection=\count90
+\c@lsubsection=\count91
+\c@lsubsubsection=\count92
+\c@lparagraph=\count93
+\c@lsubparagraph=\count94
+\c@lsubsubparagraph=\count95
+\ptrfile=\write3
+) (/usr/share/texmf/tex/latex/graphics/color.sty
+Package: color 1999/02/16 v1.0i Standard LaTeX Color (DPC)
+(/usr/share/texmf/tex/latex/config/color.cfg)
+Package color Info: Driver file: dvips.def on input line 125.
+(/usr/share/texmf/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+)) (/usr/share/texmf/tex/latex/base/inputenc.sty
+Package: inputenc 2001/07/10 v0.99a Input encoding file 
+)
+\sizebox=\box26
+\lthtmlwrite=\write4
+(images.aux)
+\openout1 = `images.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+
+latex2htmlLength hsize=349.0pt
+
+latex2htmlLength vsize=679.0pt
+
+latex2htmlLength hoffset=0.0pt
+
+latex2htmlLength voffset=0.0pt
+
+latex2htmlLength topmargin=0.0pt
+
+latex2htmlLength topskip=0.00003pt
+
+latex2htmlLength headheight=0.0pt
+
+latex2htmlLength headsep=0.0pt
+
+latex2htmlLength parskip=0.0pt plus 1.0pt
+
+latex2htmlLength oddsidemargin=31.0pt
+
+latex2htmlLength evensidemargin=31.0pt
+
+File: images/ips_main.ps Graphic file (type eps)
+<images/ips_main.ps>
+l2hSize :tex2html_wrap563:64.34671pt::0.0pt::349.0pt.
+[1
+
+
+
+]
+File: images/ips_point_none.ps Graphic file (type eps)
+<images/ips_point_none.ps>
+l2hSize :tex2html_wrap564:9.13911pt::0.0pt::349.0pt.
+[2
+
+
+]
+File: images/ips_slice3_std.ps Graphic file (type eps)
+<images/ips_slice3_std.ps>
+l2hSize :tex2html_wrap568:132.8862pt::0.0pt::349.0pt.
+[3
+
+
+]
+File: images/ips_slice3_res.ps Graphic file (type eps)
+<images/ips_slice3_res.ps>
+l2hSize :tex2html_wrap569:132.8862pt::0.0pt::349.0pt.
+[4
+
+
+]
+File: images/ips_slice3_std_eye.ps Graphic file (type eps)
+<images/ips_slice3_std_eye.ps>
+l2hSize :tex2html_wrap574:132.8862pt::0.0pt::349.0pt.
+[5
+
+
+]
+File: images/ips_slice3_res_eye.ps Graphic file (type eps)
+<images/ips_slice3_res_eye.ps>
+l2hSize :tex2html_wrap575:132.8862pt::0.0pt::349.0pt.
+[6
+
+
+]
+File: images/ips_slice3_res_zoom_1.ps Graphic file (type eps)
+<images/ips_slice3_res_zoom_1.ps>
+l2hSize :tex2html_wrap579:125.43224pt::0.0pt::349.0pt.
+[7
+
+
+]
+File: images/ips_slice3_res_zoom_2.ps Graphic file (type eps)
+<images/ips_slice3_res_zoom_2.ps>
+l2hSize :tex2html_wrap580:125.43224pt::0.0pt::349.0pt.
+[8
+
+
+]
+File: images/ips_slice3_res_aligned.ps Graphic file (type eps)
+<images/ips_slice3_res_aligned.ps>
+l2hSize :tex2html_wrap585:132.8862pt::0.0pt::349.0pt.
+[9
+
+
+]
+File: images/ips_point_one.ps Graphic file (type eps)
+<images/ips_point_one.ps>
+l2hSize :tex2html_wrap590:11.82352pt::0.0pt::349.0pt.
+[10
+
+
+]
+File: images/ips_slice3_zoomstate.ps Graphic file (type eps)
+<images/ips_slice3_zoomstate.ps>
+l2hSize :tex2html_wrap595:132.8862pt::0.0pt::349.0pt.
+[11
+
+
+]
+File: images/ips_slice3_zoomed.ps Graphic file (type eps)
+<images/ips_slice3_zoomed.ps>
+l2hSize :tex2html_wrap599:126.71739pt::0.0pt::349.0pt.
+[12
+
+
+]
+File: images/ips_point_value.ps Graphic file (type eps)
+<images/ips_point_value.ps>
+l2hSize :tex2html_wrap603:11.82352pt::0.0pt::349.0pt.
+[13
+
+
+]
+File: images/ips_point_many.ps Graphic file (type eps)
+<images/ips_point_many.ps>
+l2hSize :tex2html_wrap609:28.78772pt::0.0pt::349.0pt.
+[14
+
+
+]
+File: images/ips_point_many_est.ps Graphic file (type eps)
+<images/ips_point_many_est.ps>
+l2hSize :tex2html_wrap614:28.78772pt::0.0pt::349.0pt.
+[15
+
+
+]
+File: images/ips_slice3_err_project.ps Graphic file (type eps)
+<images/ips_slice3_err_project.ps>
+l2hSize :tex2html_wrap618:135.9706pt::0.0pt::349.0pt.
+[16
+
+
+]
+File: images/ips_slice3_zoom_err_project.ps Graphic file (type eps)
+<images/ips_slice3_zoom_err_project.ps>
+l2hSize :tex2html_wrap619:126.71739pt::0.0pt::349.0pt.
+[17
+
+
+]
+File: images/ips_inspect_overlay.ps Graphic file (type eps)
+<images/ips_inspect_overlay.ps>
+l2hSize :tex2html_wrap624:134.09413pt::0.0pt::349.0pt.
+[18
+
+
+]
+File: images/inspect_overlay_axial.ps Graphic file (type eps)
+<images/inspect_overlay_axial.ps>
+l2hSize :tex2html_wrap632:89.39365pt::0.0pt::349.0pt.
+[19
+
+
+]
+File: images/inspect_overlay_coronal.ps Graphic file (type eps)
+<images/inspect_overlay_coronal.ps>
+l2hSize :tex2html_wrap633:89.39365pt::0.0pt::349.0pt.
+[20
+
+
+]
+File: images/inspect_overlay_sagital.ps Graphic file (type eps)
+<images/inspect_overlay_sagital.ps>
+l2hSize :tex2html_wrap634:89.39365pt::0.0pt::349.0pt.
+[21
+
+
+]
+File: images/inspect_sideways_axial.ps Graphic file (type eps)
+<images/inspect_sideways_axial.ps>
+l2hSize :tex2html_wrap639:89.39365pt::0.0pt::349.0pt.
+[22
+
+
+]
+File: images/inspect_intervals.ps Graphic file (type eps)
+<images/inspect_intervals.ps>
+l2hSize :tex2html_wrap643:102.85925pt::0.0pt::349.0pt.
+[23
+
+
+]
+File: images/browse2d_main.ps Graphic file (type eps)
+<images/browse2d_main.ps>
+l2hSize :tex2html_wrap648:48.46202pt::0.0pt::349.0pt.
+[24
+
+
+]
+File: images/browse2d_client.ps Graphic file (type eps)
+<images/browse2d_client.ps>
+l2hSize :tex2html_wrap652:134.09413pt::0.0pt::349.0pt.
+[25
+
+
+]
+File: images/browse3d_main.ps Graphic file (type eps)
+<images/browse3d_main.ps>
+l2hSize :tex2html_wrap657:48.46202pt::0.0pt::349.0pt.
+[26
+
+
+]
+File: images/browse3d_client.ps Graphic file (type eps)
+<images/browse3d_client.ps>
+l2hSize :tex2html_wrap661:132.8862pt::0.0pt::349.0pt.
+[27
+
+
+] (images.aux) ) 
+Here is how much of TeX's memory you used:
+ 1120 strings out of 20876
+ 14359 string characters out of 197190
+ 56349 words of memory out of 350001
+ 4089 multiletter control sequences out of 10000+15000
+ 3938 words of font info for 15 fonts, out of 400000 for 1000
+ 14 hyphenation exceptions out of 10000
+ 25i,5n,21p,214b,218s stack positions out of 3000i,100n,1500p,50000b,4000s
+
+Output written on images.dvi (27 pages, 6516 bytes).

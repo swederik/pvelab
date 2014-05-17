@@ -1,0 +1,2 @@
+g:\subj1\subj1_BP.img;g:\subj1\subj1_mr.img
+g:\subj2\subj2_BP.img;g:\subj2\subj2_mr.img

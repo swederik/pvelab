@@ -1,0 +1,204 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>IIO - Interactive Image Overlay</TITLE>
+<META NAME="description" CONTENT="IIO - Interactive Image Overlay">
+<META NAME="keywords" CONTENT="iio">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="iio.css">
+
+<LINK REL="next" HREF="node2.html">
+<LINK REL="previous" HREF="iio.html">
+<LINK REL="up" HREF="iio.html">
+<LINK REL="next" HREF="node2.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html47"
+  HREF="node2.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html45"
+  HREF="iio.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html39"
+  HREF="iio.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html48"
+  HREF="node2.html">Inspection modules</A>
+<B> Up:</B> <A NAME="tex2html46"
+  HREF="iio.html">IIO - Interactive Image</A>
+<B> Previous:</B> <A NAME="tex2html40"
+  HREF="iio.html">IIO - Interactive Image</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00001000000000000000">
+IIO - Interactive Image Overlay</A>
+</H2>
+This section describes the usage of the NRU developed registration
+module for the <I>Interactive Image Overlay</I> (IIO) approach to
+coregistration. The method is inspired by that of Pfluger et
+al.<A NAME="tex2html1"
+  HREF="footnode.html#foot19"><SUP>1</SUP></A>.
+<BR> 
+<BR>
+The basis of the method is the
+assumption that the human eye is good at detecting differences in
+shapes. Once the module has been initiated using the main program, the
+user interface of the method appears (Figure <A HREF="node1.html#iio_1.ps">0.1</A>).
+
+<DIV ALIGN="CENTER"><A NAME="iio_1.ps"></A><A NAME="24"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure:</STRONG>
+The main interface of the IIO module.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<A NAME="tex2html3"
+  HREF=""><IMG
+ WIDTH="334" HEIGHT="283" ALIGN="BOTTOM" BORDER="0"
+ SRC="img1.png"
+ ALT="\includegraphics[width=0.6\textwidth]{images/iio_1.ps}"></A>
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+On the interface, the reslice image is shown as it directly appears
+within the space of the standard image<A NAME="tex2html4"
+  HREF="footnode.html#foot28"><SUP>2</SUP></A>
+<BR> 
+<BR>
+Next, adjustment of the reslice and standard Min/Max values should be
+made, to adjust the colormaps to the value ranges of the images. The
+value of the reslice threshold (which determines the position of the
+overlayed green contour should also be adjusted, e.g. to a value
+corresponding to the cranial surface. 
+<BR> 
+<BR>
+A first order registration can be done by pressing the 'CM alignment'
+button on the IIO interface, which will register the centres of mass
+of the two images (Figure <A HREF="node1.html#iio_2.ps">0.1</A>).
+
+<DIV ALIGN="CENTER"><A NAME="iio_2.ps"></A><A NAME="33"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure:</STRONG>
+IIO - centres of mass aligned.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<A NAME="tex2html6"
+  HREF=""><IMG
+ WIDTH="334" HEIGHT="283" ALIGN="BOTTOM" BORDER="0"
+ SRC="img2.png"
+ ALT="\includegraphics[width=0.6\textwidth]{images/iio_2.ps}"></A>
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+Clicking the three lower panes, will navigate the standard image
+space. Clicking the coronal pane will update the
+corresponding axial an sagital view ports. Clicking one of the three upper
+panes will make a zoomed version of that pane visible (left in Figure <A HREF="node1.html#iio_3.ps">1</A>)
+
+<DIV ALIGN="CENTER"><A NAME="iio_3.ps"></A><A NAME="42"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 1:</STRONG>
+Zoomed pane before (left) and after (right) transformation.</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<A NAME="tex2html8"
+  HREF="<A NAME="tex2html9"
+  HREF=">">"</A><IMG
+ WIDTH="250" HEIGHT="200" ALIGN="BOTTOM" BORDER="0"
+ SRC="img3.png"
+ ALT="\includegraphics[width=0.45\textwidth]{images/iio_3.ps}"></A><IMG
+ WIDTH="250" HEIGHT="199" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.png"
+ ALT="\includegraphics[width=0.45\textwidth]{images/iio_4.ps}">
+
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+By using the keyboard and mouse, the overlayed image and the overlayed
+image can now be aligned visually with the underlying standard image:
+
+<UL>
+<LI>The pointer keys adjusts the image orientation by translation.
+</LI>
+<LI>Translation stepsize is adjustable through + and - keys.
+</LI>
+<LI>The , and . keys adjusts the image orientation by rotation,
+    in positive/negative direction.
+</LI>
+<LI>Rotation stepsize is adjustable through * and / keys.
+</LI>
+<LI>The centre of rotation is selectable using mouse clicking.
+</LI>
+</UL>
+Once the image orientation is satisfactory (right
+in Figure <A HREF="node1.html#iio_3.ps">1</A>), the window should be
+closed using either the keyboard <TT>x</TT> key or the close button of
+the window. Repeating this process on all viewports and navigating the
+standard image space will register the two images (Figure <A HREF="node1.html#iio_5.ps">0.1</A>).
+
+<DIV ALIGN="CENTER"><A NAME="iio_5.ps"></A><A NAME="59"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure:</STRONG>
+5</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<A NAME="tex2html11"
+  HREF=""><IMG
+ WIDTH="334" HEIGHT="283" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.png"
+ ALT="\includegraphics[width=0.6\textwidth]{images/iio_5.ps}"></A>
+</DIV></TD></TR>
+</TABLE>
+</DIV>
+Once registration is satisfactory, the IIO interface should be closed,
+returning the user to the main interface of MARS, where
+registration parameters can be saved.
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html47"
+  HREF="node2.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html45"
+  HREF="iio.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html39"
+  HREF="iio.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html48"
+  HREF="node2.html">Inspection modules</A>
+<B> Up:</B> <A NAME="tex2html46"
+  HREF="iio.html">IIO - Interactive Image</A>
+<B> Previous:</B> <A NAME="tex2html40"
+  HREF="iio.html">IIO - Interactive Image</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Claus Svarer
+2004-07-23
+</ADDRESS>
+</BODY>
+</HTML>

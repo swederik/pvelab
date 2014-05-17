@@ -1,0 +1,65 @@
+
+The structure of the camera parameter definition file: ( .def )
+
+
+The file is a simple text file, with extension def.
+
+The simulator reads only those one lines, which includes the = symbol. All other lines are comments.
+
+
+General camera parameters: ( Sample data of the GE4096 PET scanner )
+
+
+FOV=550			: The field of view of the scanner, in millimeter
+
+members=96		: The number of projections in the x direction ( see radon transform, e.g. Matlab Help, or PhD thesis of Peter Toft )
+
+theta=[270:-180/511:90]	: The projection angles in degrees and Matlab format
+
+projectionOffset=0	: The start of the first projection line, in degree
+
+calibrationFactor=2.8e5	: The camera acquisitoion efficiency with GE68 line source
+
+voxelSize=0.048		: The volume of one voxel in ml.
+
+pixelSize=2		: The size of one pixel on the transaxial slice (in millimeter)
+
+radialResolutionValues=6 6.5 7	: The FWHM of a line source on the transaxial slice by different radius ( in millimeter ), 
+radialResolutionRadius=0 100 200 :  and the corresponded radius values ( in millimeter )
+
+axialPixelSize=6.5	: The width of the axial slices ( in millimeter )
+
+axialResolutionValues=6 6.5 7	: The FWHM of a line source along the Z axis of the camera by different Z values ( in millimeter ), 
+axialResolutionRadius=0 100 200	: and the corresponded Z values ( in millimeter )
+
+
+Random effect parameters:
+The random effect is described by the out = in / randomEffectConstant term and 
+the random correction is described by the out = randomCorrectionConstants(1)*in^2 + randomCorrectionConstants(2)*in equation.
+
+randomEffectConstant=1.0014
+
+randomCorrectionConstants=0.0375 0.161
+
+
+Scatter parameters: ( To measure these parameters on your camera, see H.Hoverath: Scatter correction in the transaxial 
+		      slices of a whole-body positron emission tomograph. Phys. Med. Biol. 38(1993) 717-728.
+
+scale=2.5517
+A1=1.6702e-3
+A2=1.464
+A3=2.145e-3
+A4=1.352
+A5=5.664e-2
+A6=1.584e-2
+A7=1.203
+A8=0.2037
+A10=1.195
+A11=0.279
+A12=0
+A13=1.0907e-2
+A14=0.6526e-2
+A15=1.104
+A16=9.334e-2
+A18=1.77e-2
+A21=0.118e-2
