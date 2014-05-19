@@ -184,7 +184,7 @@ end
 fclose(fid);
 
 % Check if sn.mat exist
-if exist([pathout,'sn.mat'])==0
+if exist([pathout,'sn.mat'], 'file')==0
     project=logProject('PVE_wrapper: sn.mat not found. Calculating it...',project,TaskIndex,MethodIndex);
     try
         try
@@ -194,7 +194,7 @@ if exist([pathout,'sn.mat'])==0
             seg1path=pathout;
             seg1name='r_volume_seg1.img';
         end
-        [file_pathstr,file_name,file_ext] = fileparts(seg1name);
+        [~,file_name,file_ext] = fileparts(seg1name);
         
         ffs=fullfile(seg1path,seg1name);
         ffd=fullfile(pathout,'r_volume_seg1.img');
@@ -391,7 +391,7 @@ project.taskDone{TaskIndex}.outputfiles{2}.info=project.taskDone{TaskIndex}.inpu
 
 [roiPath,roiName,roiExt]=fileparts(settings{1});
 roiName=[roiName,roiExt];
-if ~(exist(fullfile(project.sysinfo.workspace,roiName))==2)
+if ~(exist(fullfile(project.sysinfo.workspace,roiName), 'file')==2)
     ffs=settings{1};
     ffd=fullfile(project.sysinfo.workspace,roiName);
     copyfile(ffs,ffd);

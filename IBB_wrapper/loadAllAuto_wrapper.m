@@ -29,7 +29,7 @@ if flip==0
 end
 
 %Create out,in and show filefields
-for(ModalityIndex=1:noModalities)
+for ModalityIndex=1:noModalities
     project.taskDone{TaskIndex}.inputfiles{ImageIndex,ModalityIndex}.path='';
     project.taskDone{TaskIndex}.inputfiles{ImageIndex,ModalityIndex}.name='' ;
     project.taskDone{TaskIndex}.inputfiles{ImageIndex,ModalityIndex}.info='';
@@ -82,7 +82,7 @@ ImageIndex=1;
 
 %Check if headers are alright
 MRfile=felt1;
-[file_pathstr,file_name,file_ext] = fileparts(MRfile);
+[file_pathstr,~,file_ext] = fileparts(MRfile);
 if strcmp(file_ext,'.img')==1
     MRhdr=ReadAnalyzeHdr(MRfile);
 else
@@ -121,7 +121,7 @@ for i=1:5
         Str=felt1;
     end
     % Need conversion to Analyze...
-    [file_pathstr,file_name,file_ext] = fileparts(Str);
+    [file_pathstr,~,file_ext] = fileparts(Str);
     NEWPath=file_pathstr;
     
     switch lower(file_ext)
