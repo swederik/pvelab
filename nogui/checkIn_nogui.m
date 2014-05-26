@@ -43,7 +43,7 @@ function [project,stateReturn]=checkIn_nogui(project,TaskIndex,MethodIndex,varar
 % - OK 100104TR: Detach function implemented
 
 %_________ CheckIn a configurator
-if(length(varargin)>0 & strcmp(varargin{1},'configurator'))
+if(~isempty(varargin) && strcmp(varargin{1},'configurator'))
     chkInConfigurator=1; 
 else
     chkInConfigurator=0;
@@ -54,12 +54,12 @@ stateReturn=0;
 
 %__________ Check if other tasks in the pipeline are active...
 %Tasks named 'other' have no influence on the pipeline 
-if(~strcmp(lower(project.pipeline.taskSetup{TaskIndex,MethodIndex}.task),'others'))
+if(~strcmpi(project.pipeline.taskSetup{TaskIndex,MethodIndex}.task,'others'))
     q=find(project.pipeline.statusTask==1); %'ACTIVE'=1   
 
    
     %a configurator is checked in (eg. TaskIndex=8, MethodIndex=16)
-    if (~isempty(q) & chkInConfigurator) %configurator 
+    if (~isempty(q) && chkInConfigurator) %configurator 
         %____ Set Indexes to GUIselected
         TaskSelected=project.handles.data.SelectedTaskIndexGUI;
         i=1;
@@ -96,7 +96,7 @@ if(~strcmp(lower(project.pipeline.taskSetup{TaskIndex,MethodIndex}.task),'others
     end
         
     %A method is running
-    if(~isempty(q) & ~strcmp(lower(project.pipeline.taskSetup{q(1),MethodIndex}.task),'others'))
+    if(~isempty(q) && ~strcmpi(project.pipeline.taskSetup{q(1),MethodIndex}.task,'others'))
         Ans=questdlg('A task in the pipeline is already running. Would you like to detach from the running method (results already generated in this method will be lost)?','Detach from running method?','Yes','No','No');          
         if strcmp(Ans,'Yes')
             %______________ Clean taskDone _____________
@@ -105,7 +105,7 @@ if(~strcmp(lower(project.pipeline.taskSetup{TaskIndex,MethodIndex}.task),'others
             %Find the used method
             Si=size(project.pipeline.taskSetup);
             for i=1:Si(2)
-                if ~isempty(project.taskDone{CleanTaskIndex}) &...
+                if ~isempty(project.taskDone{CleanTaskIndex}) &&...
                        ~isempty(project.pipeline.taskSetup{CleanTaskIndex,i}) &...
                         strcmp(project.taskDone{CleanTaskIndex}.method,project.pipeline.taskSetup{CleanTaskIndex,i}.method)
                     CleanMethodIndex=i;
@@ -160,7 +160,7 @@ if(~chkInConfigurator)
 
     %__________Check if method can run under current OS...
     OS=project.pipeline.taskSetup{TaskIndex,MethodIndex}.require_os;
-    if(OS==0 | (OS==1 & isunix) | (OS==2 & ~isunix))
+    if(OS==0 || (OS==1 && isunix) || (OS==2 && ~isunix))
         
     else
         display_text('Method not compatible with current Operating System.');
@@ -173,7 +173,7 @@ if(~chkInConfigurator)
     require_taskIndex=project.pipeline.taskSetup{TaskIndex,MethodIndex}.require_taskindex; %Get requirement of done tasks 
     
     %__________Check if required tasks are done...
-    for(taskCount=1:length(require_taskIndex))
+    for taskCount=1:length(require_taskIndex)
         if(isempty(require_taskIndex{taskCount}));   %No requirements to task
         else
             if(require_taskIndex{taskCount}==0)      %Task has to be completed
@@ -186,7 +186,7 @@ if(~chkInConfigurator)
                 methodDone=false;
                 methodVector=require_taskIndex{taskCount};
                 if (project.pipeline.statusTask(taskCount)==2)
-                    for(methodCount=1:length(methodVector))
+                    for methodCount=1:length(methodVector)
                         if strcmp(project.taskDone{taskCount}.method,project.pipeline.taskSetup{taskCount,methodVector(methodCount)}.method)
                             methodDone=true;
                         end
@@ -325,7 +325,7 @@ if(nargin>3)
 end
 
 %__________ Define outputname if input name exist...
-if(TaskIndex>1 & project.pipeline.lastTaskIndex(end)~=0 && ~chkInConfigurator) % Files are loaded
+if(TaskIndex>1 && project.pipeline.lastTaskIndex(end)~=0 && ~chkInConfigurator) % Files are loaded
    
 %     %If inputfiles has vanished...it could happen
 %     for(i=1:length(project.pipeline.imageModality))

@@ -37,6 +37,9 @@ project.handles.h_mainfig = 'n';
 % Setup project as given in the template
 project.pipeline.taskSetup=template.template.pipeline.taskSetup;
 project.pipeline.userPipeline = [1 6 4 6 4 1 1];
+
+% Enables all PVE correction methods
+project.pipeline.taskSetup{6}.configurator.user{7} = 255 
 %project.pipeline.userPipeline=template.template.pipeline.userPipeline;
 
 project.pipeline.defaultPipeline=template.template.pipeline.defaultPipeline;
@@ -65,9 +68,9 @@ if project.pipeline.userPipeline(2)==5 % Load AIR file...
 end
 
 if project.pipeline.userPipeline(3)==4 % Load Segmented...
-    project.pipeline.taskSetup{3,4}.method_name='loadSegAuto_wrapper';
-    project.pipeline.taskSetup{3,4}.function_name='loadSegAuto_wrapper';
-    project.pipeline.taskSetup{3,4}.function_wrapper='loadSegAuto_wrapper';
+    project.pipeline.taskSetup{3,4}.method_name='loadSeg_nogui';
+    project.pipeline.taskSetup{3,4}.function_name='loadSeg_nogui';
+    project.pipeline.taskSetup{3,4}.function_wrapper='loadSeg_nogui';
 end
 
 if project.pipeline.userPipeline(4)==6 % Load All Coregistered...
@@ -90,6 +93,15 @@ if project.pipeline.userPipeline(6)==1 % PVE
     project.pipeline.taskSetup{6,1}.function_name='PVE_nogui';
     project.pipeline.taskSetup{6,1}.function_wrapper='PVE_nogui';
 end
+
+if project.pipeline.userPipeline(7)==1 % Extract Data
+    project.pipeline.taskSetup{7,1}.method_name='extract_nogui';
+    project.pipeline.taskSetup{7,1}.function_name='extract_nogui';
+    project.pipeline.taskSetup{7,1}.function_wrapper='extract_nogui';
+    project.pipeline.taskSetup{7,1}.require_taskindex{4} = [];
+    project.pipeline.taskSetup{7,1}.require_taskindex{6} = [1];
+end
+
 
 project.pipeline.taskSetup{1,1}.method='Load 1 PET + 1 MR';
 project.pipeline.taskSetup{1,1}.method_name='FileLoad1MRAuto_wrapper';
@@ -121,7 +133,7 @@ if startstep>1
 end
 
 project.pipeline.userPipeline
-for TaskIndex=startstep:7
+for TaskIndex=startstep:6
     TaskIndex
     MethodIndex=project.pipeline.userPipeline(TaskIndex);
     project=main_nogui(project,TaskIndex,MethodIndex);

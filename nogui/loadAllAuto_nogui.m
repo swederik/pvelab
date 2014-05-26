@@ -1,4 +1,4 @@
-function project=loadAllAuto_wrapper(project,TaskIndex,MethodIndex,varargin)
+function project=loadAllAuto_nogui(project,TaskIndex,MethodIndex,varargin)
 % This method is called by the pipeline program.
 % It loads three segmented files and a PET file into the project structure.
 % It checks if the loaded files are the same size and dimension and if they
@@ -34,59 +34,6 @@ end
 
 global PETpath T1Wpath
 
-%Check if headers are alright
-MRfile=fullfile('',project.taskDone{1}.outputfiles{2}.path, project.taskDone{1}.outputfiles{2}.name);
-[~,~,file_ext] = fileparts(MRfile);
-if strcmp(file_ext,'.img')==1
-    MRhdr=ReadAnalyzeHdr(MRfile);
-end
-for i=1:3
-    project=logProject('Imagefile: Analyze',project,TaskIndex,MethodIndex);
-    [Path,Name,~] = fileparts(project.taskDone{3}.userdata.segout{i}.path);
-    HdrStr=fullfile(Path,[Name,'.hdr']);
-    HdrStr
-    if exist(HdrStr,'file')==2
-        try
-            SEGhdr=ReadAnalyzeHdr(HdrStr);
-        catch
-            if (i<3)
-                disp(['Cant read headerfile: ',HdrStr],'Error');
-                return;
-            end
-        end
-
-        if ~(SEGhdr.dim(1:3)==MRhdr.dim(1:3))
-            disp(['Dimensions in file: ',HdrStr,' does not match loaded segmented.'],'Error');
-            return;
-        end
-        if any(abs(SEGhdr.siz-MRhdr.siz)>0.01)
-            disp(['Voxel size in file: ',HdrStr,' does not match loaded segmented.'],'Error');
-            return;
-        end
-        if any(abs(SEGhdr.origin-MRhdr.origin)>0.01)
-            disp(['Origin in file: ',HdrStr,' does not match loaded segmented. Use Fix Analyzeheader tool to set origin in either loaded or segmentation file.'],'Error');
-            return;
-        end
-        project=logProject(['Copying: ',Name,'.* to project directory...'],project,TaskIndex,MethodIndex);
-        ffs=fullfile(Path,[Name,'.img']);
-        ffd=fullfile(project.sysinfo.workspace,[Name,'.img']);
-        if strcmp(ffs,ffd)==0
-            copyfile(ffs,ffd);
-        end
-        ffs=fullfile(Path,[Name,'.hdr']);
-        ffd=fullfile(project.sysinfo.workspace,[Name,'.hdr']);
-        if strcmp(ffs,ffd)==0
-            copyfile(ffs,ffd);
-        end
-        project.taskDone{TaskIndex}.userdata.segoutReslice{i}.path=project.sysinfo.workspace;
-        project.taskDone{TaskIndex}.userdata.segoutReslice{i}.name=[Name,'.img'];
-    else
-        if (i<3)
-            disp(['Cant find file: ',HdrStr],'Error');
-            return
-        end
-    end
-end
 
 project.taskDone{TaskIndex}.userdata.segoutReslice{1}.info='Coregistered segmented Gray Matter';
 project.taskDone{TaskIndex}.userdata.segoutReslice{2}.info='Coregistered segmented White Matter';
