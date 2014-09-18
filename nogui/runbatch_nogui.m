@@ -1,4 +1,4 @@
-function project=runbatch_nogui(filelist, gm, wm, csf, rois, dat)
+function project=runbatch_nogui(filelist, gm, wm, csf, rois, dat, x_fwhm, y_fwhm, z_fwhm)
 
 project=setupProject_nogui(0,'pvelabCorrectOnly.ini');
 TaskIndex = 1;
@@ -22,7 +22,11 @@ T1WS=a(2:(1+NumberMR):end)';
 T2WS=a(NumberMR:(1+NumberMR):end)';
 PDWS=a(1+NumberMR:(1+NumberMR):end)';
 project.handles.h_mainfig = 'n';
-    
+
+project.pipeline.taskSetup{6}.configurator.default{3} = x_fwhm;
+project.pipeline.taskSetup{6}.configurator.default{4} = y_fwhm;
+project.pipeline.taskSetup{6}.configurator.default{5} = z_fwhm;
+
 for i=1:length(PETS)
     project=logProject(['Running analysis ',num2str(i)],project,TaskIndex,MethodIndex);
     %project.sysinfo.prjfile = fullfile('/Users/erik/Dropbox/Analysis/Alzheimers/DemoImages','ErikProject.prj');
