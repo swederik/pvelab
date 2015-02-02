@@ -1,4 +1,4 @@
-function project=RunPrjFromTemplate_nogui(project,TaskIndex,MethodIndex,fullPETpath,fullT1Wpath,fullT2Wpath,fullPDWpath, gm, wm, csf, rois, dat)
+function project=RunPrjFromTemplate_nogui(project,TaskIndex,MethodIndex,fullPETpath,fullT1Wpath,fullT2Wpath,fullPDWpath, gm, wm, csf, rois, dat, x_fwhm, y_fwhm)
 
 StartDir=pwd;
 template_file = 'SegSkipAtlas.tem';
@@ -39,7 +39,10 @@ project.pipeline.taskSetup=template.template.pipeline.taskSetup;
 project.pipeline.userPipeline = [1 6 4 6 4 1 1];
 
 % Enables all PVE correction methods
-project.pipeline.taskSetup{6}.configurator.user{7} = 255 
+project.pipeline.taskSetup{6}.configurator.user{7} = 255;
+project.pipeline.taskSetup{6}.configurator.user{3} = x_fwhm;
+project.pipeline.taskSetup{6}.configurator.user{4} = y_fwhm;
+
 %project.pipeline.userPipeline=template.template.pipeline.userPipeline;
 
 project.pipeline.defaultPipeline=template.template.pipeline.defaultPipeline;

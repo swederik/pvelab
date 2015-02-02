@@ -23,14 +23,10 @@ T2WS=a(NumberMR:(1+NumberMR):end)';
 PDWS=a(1+NumberMR:(1+NumberMR):end)';
 project.handles.h_mainfig = 'n';
 
-project.pipeline.taskSetup{6}.configurator.default{3} = x_fwhm;
-project.pipeline.taskSetup{6}.configurator.default{4} = y_fwhm;
-project.pipeline.taskSetup{6}.configurator.default{5} = z_fwhm;
-
 for i=1:length(PETS)
     project=logProject(['Running analysis ',num2str(i)],project,TaskIndex,MethodIndex);
     %project.sysinfo.prjfile = fullfile('/Users/erik/Dropbox/Analysis/Alzheimers/DemoImages','ErikProject.prj');
-    project=RunPrjFromTemplate_nogui(project,TaskIndex,MethodIndex,cell2mat(PETS(i)),cell2mat(T1WS(i)),cell2mat(T2WS(i)),cell2mat(PDWS(i)), gm, wm, csf, rois, dat);
+    project=RunPrjFromTemplate_nogui(project,TaskIndex,MethodIndex,cell2mat(PETS(i)),cell2mat(T1WS(i)),cell2mat(T2WS(i)),cell2mat(PDWS(i)), gm, wm, csf, rois, dat, x_fwhm, y_fwhm);
     disp project;
 end
 
